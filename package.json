@@ -1,0 +1,9 @@
+{
+  "name": "cicero",
+  "version": "4.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Plataforma estática de introdução à vida adulta.",
+  "scripts": { "serve": "node server.js", "test": "node tests/test-runner.js" },
+  "engines": { "node": ">=18.0.0" }
+}

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Cícero: decisões cotidianas para começar a vida adulta com mais autonomia.">
+  <meta name="theme-color" content="#103d3b">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <script src="js/preferences-bootstrap.js?v=41"></script>
+  <link rel="stylesheet" href="css/styles.css?v=41">
+  <title>Cícero — Introdução à vida adulta</title>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <a class="brand" href="#/" aria-label="Cícero, página inicial"><span>Cícero</span><small>Guia para a vida adulta</small></a>
+    <button id="alternar-menu" class="header-button nav-toggle" type="button" aria-expanded="false" aria-controls="controles-cabecalho">Menu</button>
+    <div id="controles-cabecalho" class="header-controls">
+      <nav aria-label="Navegação principal"><a data-route="trilhas" href="#/trilhas">Trilhas</a><a data-route="glossario" href="#/glossario">Glossário</a><a data-route="fontes" href="#/fontes">Fontes</a><a data-route="sobre" href="#/sobre">Sobre</a><a data-route="ajuda" href="#/ajuda">Ajuda</a></nav>
+      <div class="header-actions"><button id="alternar-busca" class="header-button" type="button" aria-expanded="false" aria-controls="busca">Buscar</button><button id="abrir-acessibilidade" class="header-button" type="button" aria-haspopup="dialog" aria-controls="acessibilidade">Acessibilidade</button></div>
+    </div>
+  </header>
+  <section id="busca" class="search-panel" hidden aria-label="Busca">
+    <p class="eyebrow">Busca local</p>
+    <label for="campo-busca">O que você precisa entender?</label>
+    <div class="search-row"><input id="campo-busca" type="search" autocomplete="off" placeholder="Ex.: contracheque, Constituição, orçamento"><button id="limpar-busca" type="button">Limpar</button></div>
+    <div id="resultados-busca" aria-live="polite"></div>
+  </section>
+  <main id="conteudo" tabindex="-1"></main>
+  <div id="status-aplicacao" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></div>
+  <dialog id="acessibilidade" class="accessibility-dialog" aria-labelledby="titulo-acessibilidade" aria-describedby="descricao-acessibilidade">
+    <div class="dialog-heading"><div><p class="eyebrow">Preferências locais</p><h2 id="titulo-acessibilidade">Acessibilidade</h2></div><button id="fechar-acessibilidade" class="dialog-close" type="button" aria-label="Fechar acessibilidade">Fechar</button></div>
+    <p id="descricao-acessibilidade">Ajuste a leitura. As escolhas ficam somente neste navegador e não alteram seu progresso.</p>
+    <form id="preferencias-acessibilidade">
+      <fieldset><legend>Tamanho do texto</legend><div class="choice-row"><label><input type="radio" name="textScale" value="100"> 100%</label><label><input type="radio" name="textScale" value="112"> 112%</label><label><input type="radio" name="textScale" value="125"> 125%</label><label><input type="radio" name="textScale" value="150"> 150%</label></div></fieldset>
+      <fieldset><legend>Espaçamento</legend><div class="choice-row"><label><input type="radio" name="spacing" value="standard"> Padrão</label><label><input type="radio" name="spacing" value="comfortable"> Confortável</label></div></fieldset>
+      <fieldset><legend>Fonte dos títulos</legend><div class="choice-row"><label><input type="radio" name="headingFont" value="editorial"> Editorial</label><label><input type="radio" name="headingFont" value="sans"> Sem serifa</label></div></fieldset>
+      <fieldset><legend>Tema</legend><div class="choice-row"><label><input type="radio" name="theme" value="light"> Claro</label><label><input type="radio" name="theme" value="dark"> Escuro</label></div></fieldset>
+      <fieldset><legend>Contraste</legend><div class="choice-row"><label><input type="radio" name="contrast" value="standard"> Padrão</label><label><input type="radio" name="contrast" value="high"> Alto</label></div></fieldset>
+      <fieldset><legend>Movimento</legend><div class="choice-row"><label><input type="radio" name="motion" value="system"> Seguir o sistema</label><label><input type="radio" name="motion" value="reduced"> Reduzir</label></div></fieldset>
+      <label class="check-choice"><input type="checkbox" name="linkEmphasis"> Sublinhar e reforçar os links</label>
+      <div class="dialog-actions"><button id="restaurar-acessibilidade" class="button button--secondary" type="button">Restaurar padrão</button><button class="button" type="submit">Concluir</button></div>
+    </form>
+  </dialog>
+  <footer class="site-footer"><div><a class="footer-brand" href="#/">Cícero</a><p>Educação para decisões cotidianas.</p></div><div><p>Não substitui atendimento jurídico, financeiro, trabalhista, médico, público ou de emergência.</p><p>Conteúdo geral revisado em 18 de outubro de 2026. <a href="#/fontes">Consulte as fontes e limites.</a></p></div></footer>
+  <script type="module" src="js/app.js?v=41"></script>
+</body>
+</html>
