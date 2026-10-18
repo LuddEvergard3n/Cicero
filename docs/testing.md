@@ -455,5 +455,7 @@ Executada em 18 de outubro de 2026:
 - depois da primeira visita on-line, a rota Ajuda recarregou sem rede com título e conteúdo completos;
 - revisão visual da home em 1280 × 720 e da trilha de reparos não encontrou corte, sobreposição ou perda de hierarquia;
 - console sem erros ou avisos nos fluxos finais.
+- GitHub Pages concluiu o build do commit `3f47132633020bd3e76c0fb87a33d83c4dc99864`; HTML, JSON, manifesto e Service Worker responderam `200` por HTTPS;
+- na página pública, recursos `?v=41`, escopo `/Cicero/`, controle pelo Service Worker e cache `cicero-v41` foram confirmados sem erro ou aviso no console.
 
 Não executados: NVDA e qualquer outro leitor de tela, retirados do aceite por solicitação do usuário; zoom real pela interface do navegador; dispositivo físico, toque físico, caneta, Safari, Firefox e Edge externos; abertura pelo ícone instalado; auditoria WCAG independente. O comando de diagnóstico de instalabilidade do navegador não retornou resultado, portanto manifesto válido, Service Worker e offline não são descritos como confirmação do prompt de instalação em todos os navegadores.

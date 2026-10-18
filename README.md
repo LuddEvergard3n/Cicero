@@ -2,6 +2,9 @@
 
 Plataforma educacional estática de introdução à vida adulta para jovens brasileiros de 16 a 24 anos. A versão pública 4.0.0 organiza 65 trilhas em sete eixos navegáveis, com numeração hierárquica por eixo, e oferece ajuda, preferências locais de acessibilidade, navegação responsiva e instalação PWA. O conteúdo ensina decisões gerais sem aconselhamento individual, coleta de dados ou recomendação de produtos.
 
+- Site: [luddevergard3n.github.io/Cicero](https://luddevergard3n.github.io/Cicero/)
+- Repositório: [LuddEvergard3n/Cicero](https://github.com/LuddEvergard3n/Cicero)
+
 ## Princípios
 
 - Educação geral, não aconselhamento financeiro ou jurídico individual.

@@ -16,13 +16,7 @@ O servidor escuta somente em `127.0.0.1:8084`. Acesse `http://127.0.0.1:8084/`. 
 
 ## GitHub Pages
 
-O projeto ainda não possui repositório Git ou remoto configurado. Quando houver um repositório:
-
-1. Versione a raiz do projeto sem etapa de build.
-2. Envie a branch escolhida ao GitHub.
-3. Em Pages, selecione implantação a partir da branch e a pasta raiz `/`.
-4. Aguarde o estado publicado e abra a URL retornada pelo GitHub.
-5. Execute a verificação pós-publicação abaixo.
+O repositório público é [LuddEvergard3n/Cicero](https://github.com/LuddEvergard3n/Cicero). O GitHub Pages publica a branch `main`, pasta raiz `/`, em [luddevergard3n.github.io/Cicero](https://luddevergard3n.github.io/Cicero/), com HTTPS obrigatório e sem etapa de build.
 
 As rotas usam hash, portanto não exigem `404.html`, redirects ou configuração de servidor.
 

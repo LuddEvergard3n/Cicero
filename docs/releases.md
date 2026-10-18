@@ -7,6 +7,7 @@
 - Registrou auditoria interna orientada a risco das vinte trilhas mais sensíveis.
 - Validou reflow, teclado, contraste forçado e movimento reduzido sem declarar conformidade formal.
 - Cache: `cicero-v41`; recursos internos: `?v=41`.
+- Publicou o commit inicial e confirmou o GitHub Pages por HTTPS.
 
 ## 3.11.0 — Reparos domésticos e cuidados na internet
 
