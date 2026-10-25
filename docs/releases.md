@@ -1,5 +1,23 @@
 # Histórico de versões
 
+## 4.2.0 — Mobilidade e rotina alimentar (local, 25/10/2026)
+
+- Adicionou 03.07 e 03.08 com treze etapas, dois cenários e dois checklists.
+- Acrescentou dez termos e oito referências oficiais: 68 trilhas, 324 termos e 180 fontes.
+- Preservou posições, IDs e chaves locais; as 68 trilhas receberam revisão estrutural de legibilidade em 25/10/2026.
+- Reutilizou renderizador, temas e contratos atuais; sem componente, tabela, host ou dependência nova.
+- Cache `cicero-v43`, recursos `?v=43`; sem commit, push ou publicação.
+- As 180 referências foram verificadas novamente; revisões especializadas em trânsito e segurança dos alimentos permanecem pendentes.
+
+## 4.1.0 — Mecânica básica (local, 25/10/2026)
+
+- Adicionou 03.06, sete etapas, quadro de seis sinais, cenário e checklist.
+- Acrescentou oito termos e cinco referências: 66 trilhas, 314 termos, 172 fontes.
+- Preservou os 65 conteúdos anteriores, posições, IDs, chaves locais e revisão geral de 18/10/2026.
+- Contagem do catálogo agora calculada pelos dados; tema reutilizado.
+- Cache `cicero-v42`, recursos `?v=42`; sem commit, push ou publicação.
+- Revisão interna parcial registrada; revisão profissional pendente. Resultados em `testing.md`.
+
 ## 4.0.0 — Primeira publicação pública
 
 - Preservou sete eixos, 65 trilhas, 306 termos, 167 fontes, IDs, URLs e dados locais.

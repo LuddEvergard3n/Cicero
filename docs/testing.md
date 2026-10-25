@@ -15,7 +15,7 @@ O runner usa `node:assert/strict`, não exige instalação e retorna código dif
 - presença dos arquivos públicos, módulos e documentos essenciais;
 - ausência de scripts, folhas de estilo, fontes e imagens externas no shell, CSS e aplicação;
 - ausência de dependências de execução e desenvolvimento;
-- exatamente sete eixos, 65 trilhas, 306 termos e 167 fontes na versão 3.11;
+- exatamente sete eixos, 68 trilhas, 324 termos e 180 fontes na versão 4.2;
 - IDs, campos e referências dos eixos, com cada trilha atribuída uma única vez e sem colisão de IDs;
 - IDs únicos de termos e fontes;
 - IDs únicos de trilhas;
@@ -33,7 +33,7 @@ O runner usa `node:assert/strict`, não exige instalação e retorna código dif
 - presença das rotas renderizadas, inclusive Ajuda sem conteúdo, do catálogo filtrado e do estado `aria-pressed` dos cenários;
 - presença do estado recuperável para falha editorial e dos anúncios de progresso;
 - buscas e limites editoriais específicos das cinco trilhas de vida prática adicionadas entre 3.6 e 3.8;
-- suporte declarado a redução de movimento, alto contraste e temas das 65 trilhas;
+- suporte declarado a redução de movimento, alto contraste e temas das 68 trilhas;
 - manifesto, dimensões reais dos ícones, versão atual do cache offline e remoção de caches antigos.
 
 ## O que o teste não prova
@@ -457,5 +457,73 @@ Executada em 18 de outubro de 2026:
 - console sem erros ou avisos nos fluxos finais.
 - GitHub Pages concluiu o build do commit `3f47132633020bd3e76c0fb87a33d83c4dc99864`; HTML, JSON, manifesto e Service Worker responderam `200` por HTTPS;
 - na página pública, recursos `?v=41`, escopo `/Cicero/`, controle pelo Service Worker e cache `cicero-v41` foram confirmados sem erro ou aviso no console.
+
+## Validação local 4.1.0 — 25/10/2026
+
+### Automatizado
+
+- `npm test`: aprovado com sete eixos, 66 trilhas, 314 termos, 172 fontes e `reviewedAt` geral preservado em 18/10/2026;
+- `node --check` nos módulos JavaScript e no Service Worker: aprovado;
+- `git diff --check`: aprovado;
+- IDs, posição `03.06`, seis linhas da tabela, oito termos, cinco fontes, hosts exatos, tema, buscas sem acento e limites textuais: aprovados;
+- comparação estrutural durante a edição: as 65 trilhas, 306 termos e 167 fontes anteriores permaneceram integralmente iguais; somente o resumo do eixo recebeu a ampliação prevista;
+- pacote `4.1.0`, cache `cicero-v42` e recursos `?v=42`: sincronizados.
+
+### Navegador por HTTP local
+
+- eixo `moradia-servicos`: seis trilhas na ordem esperada e mecânica em `03.06`;
+- trilha, tabela semântica, cinco fontes e oito termos: abertos; todos os termos retornaram backlink para a trilha;
+- três respostas do cenário: respostas inadequadas e adequada anunciaram o retorno esperado;
+- checklist, conclusão e remoção: executados; foco retornou ao `main` e os anúncios globais foram emitidos;
+- progresso anterior `credito`: preservado antes, durante e depois da atualização e do teste da nova trilha;
+- atualização real no navegador local: `cicero-v41` foi removido e apenas `cicero-v42` permaneceu;
+- segunda carga sem rede: a rota da trilha reabriu pelo cache `cicero-v42`, com título e conteúdo disponíveis; console sem erros ou avisos;
+- 320, 768 e 1280 px: sem rolagem horizontal da página; em 320 px, a tabela excedeu somente sua região rolável e respondeu à seta do teclado;
+- tema escuro, contraste alto e redução de movimento: aplicados em conjunto; foco visível confirmado na região da tabela; padrões locais restaurados após o teste;
+- cores forçadas e redução de movimento do sistema: emulação reconhecida; `scroll-behavior` ficou `auto`.
+
+### Não executado
+
+- leitor de tela, conforme solicitação;
+- revisão por profissional de mecânica, teste em carro real e validação de diagnóstico, que permanecem fora do escopo;
+- commit, push, GitHub Pages e validação pública, que não foram solicitados;
+- dispositivos físicos de 320/768/1280 px: as larguras foram emuladas no navegador local.
+
+## Validação local 4.2.0 — 25/10/2026
+
+### Automatizado
+
+- `npm test`: aprovado com sete eixos, 68 trilhas, 324 termos, 180 fontes e `reviewedAt` geral atualizado para 25/10/2026 após a revisão de legibilidade;
+- `node --check` em `app.js`, `search.js`, `router.js` e `sw.js`: aprovado;
+- IDs, posições 03.07 e 03.08, ordem anterior, referências cruzadas, cenários, temas e hosts: aprovados;
+- buscas sem acento pelos dez conceitos novos e limites textuais de trânsito, alimentação e saneantes: aprovados;
+- todas as perguntas terminam com interrogação; nenhuma trilha possui alternativa ou item de checklist repetido; todas as etapas têm no máximo 500 caracteres;
+- pacote `4.2.0`, cache `cicero-v43` e recursos `?v=43`: sincronizados.
+
+### Fontes
+
+- as 180 URLs foram testadas em 25/10/2026: 149 responderam diretamente;
+- 31 recusaram o cliente automatizado por TLS, proteção antirrobô, exigência de JavaScript ou método HTTP; as páginas institucionais críticas do Planalto, Câmara, MRE e Portal da Transparência foram confirmadas pelo navegador de pesquisa;
+- a cartilha de boas práticas redirecionou para o PDF oficial equivalente no mesmo host da Anvisa; nenhum endereço precisou ser substituído e nenhum host foi acrescentado à lista permitida.
+
+### Navegador por HTTP local
+
+- eixo `moradia-servicos`: oito trilhas na ordem esperada, preservando mecânica em 03.06 e exibindo mobilidade e alimentação em 03.07 e 03.08;
+- as duas trilhas abriram com objetivos, treze etapas ao todo, cenários, checklists, termos e retorno ao eixo;
+- alternativas inadequadas e adequadas produziram os retornos esperados e atualizaram `aria-pressed`;
+- checklist, conclusão e remoção funcionaram nas duas trilhas, com anúncios globais; o estado final foi restaurado para não concluído;
+- os dez termos abriram por rota própria e mostraram backlink para a trilha correta; a página de fontes exibiu as oito referências novas e total de 180;
+- as dez consultas previstas retornaram o termo esperado com e sem acentos;
+- 320, 768 e 1280 pixels não apresentaram overflow horizontal;
+- tema escuro, contraste alto e movimento reduzido foram aplicados pelos controles locais e restaurados ao padrão; `forced-colors` e `prefers-reduced-motion` também foram reconhecidos por emulação;
+- o Service Worker controlou a página e o armazenamento apresentou somente `cicero-v43`; uma recarga posterior com a rede desativada reabriu a trilha de alimentação sem erro;
+- console sem avisos ou erros nas duas trilhas e na visita offline.
+
+### Não executado
+
+- leitor de tela, conforme solicitação;
+- zoom real de 400%: a ferramenta programática foi limitada pelo navegador a 300%; o reflow em 320 pixels foi aprovado, mas não substitui o teste real;
+- transição observada desde um cache comprovadamente presente `cicero-v42`: após a atualização, somente `cicero-v43` foi encontrado;
+- dispositivos físicos, revisão especializada em trânsito ou segurança dos alimentos, commit, push e GitHub Pages.
 
 Não executados: NVDA e qualquer outro leitor de tela, retirados do aceite por solicitação do usuário; zoom real pela interface do navegador; dispositivo físico, toque físico, caneta, Safari, Firefox e Edge externos; abertura pelo ícone instalado; auditoria WCAG independente. O comando de diagnóstico de instalabilidade do navegador não retornou resultado, portanto manifesto válido, Service Worker e offline não são descritos como confirmação do prompt de instalação em todos os navegadores.

@@ -1,7 +1,7 @@
 import { getRoute, escapeHtml } from "./router.js";
 import { searchContent } from "./search.js";
 import { clearProgress, loadProgress, saveProgress } from "./storage.js";
-import { DEFAULT_PREFERENCES, applyPreferences, clearPreferences, loadPreferences, savePreferences } from "./preferences.js?v=41";
+import { DEFAULT_PREFERENCES, applyPreferences, clearPreferences, loadPreferences, savePreferences } from "./preferences.js?v=43";
 
 const main = document.querySelector("main");
 const panel = document.querySelector("#busca");
@@ -18,7 +18,7 @@ let preferences = applyPreferences(loadPreferences());
 let accessibilityTrigger = accessibilityButton;
 let content = null;
 try {
-  const response = await fetch("data/content.json?v=41");
+  const response = await fetch("data/content.json?v=43");
   if (!response.ok) throw new Error();
   content = await response.json();
 } catch {
@@ -164,7 +164,7 @@ function tracks(axisId = null) {
     main.innerHTML = `<a class="back-link" href="#/trilhas"><span aria-hidden="true">←</span> Todos os eixos</a><section class="page-heading page-heading--catalog"><p class="eyebrow">Eixo · ${completed} de ${selected.tracks.length} concluídas</p><h1>${escapeHtml(selected.title)}</h1><p class="lead">${escapeHtml(selected.summary)}</p><progress value="${completed}" max="${selected.tracks.length}">${completed} de ${selected.tracks.length}</progress></section><section class="track-grid">${axisTracks(selected).map((track) => trackCard(track)).join("")}</section>`;
     return;
   }
-  main.innerHTML = `<section class="page-heading page-heading--catalog"><p class="eyebrow">Trilhas</p><h1>Comece pela situação que você vive agora.</h1><p class="lead">As 65 trilhas estão reunidas em sete eixos. Não há ordem obrigatória.</p></section><div class="axis-catalog">${content.axes.map((axis) => `<section class="axis-section" aria-labelledby="eixo-${escapeHtml(axis.id)}"><div class="section-heading"><p class="eyebrow">${axisProgress(axis)} de ${axis.tracks.length} concluídas</p><h2 id="eixo-${escapeHtml(axis.id)}"><a href="#/trilhas/${escapeHtml(axis.id)}">${escapeHtml(axis.title)}</a></h2><p>${escapeHtml(axis.summary)}</p></div><div class="track-grid">${axisTracks(axis).map((track) => trackCard(track)).join("")}</div></section>`).join("")}</div>`;
+  main.innerHTML = `<section class="page-heading page-heading--catalog"><p class="eyebrow">Trilhas</p><h1>Comece pela situação que você vive agora.</h1><p class="lead">As ${content.tracks.length} trilhas estão reunidas em sete eixos. Não há ordem obrigatória.</p></section><div class="axis-catalog">${content.axes.map((axis) => `<section class="axis-section" aria-labelledby="eixo-${escapeHtml(axis.id)}"><div class="section-heading"><p class="eyebrow">${axisProgress(axis)} de ${axis.tracks.length} concluídas</p><h2 id="eixo-${escapeHtml(axis.id)}"><a href="#/trilhas/${escapeHtml(axis.id)}">${escapeHtml(axis.title)}</a></h2><p>${escapeHtml(axis.summary)}</p></div><div class="track-grid">${axisTracks(axis).map((track) => trackCard(track)).join("")}</div></section>`).join("")}</div>`;
 }
 
 /** Renders one track and wires its scenario and completion controls. */

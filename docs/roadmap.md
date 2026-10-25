@@ -21,18 +21,18 @@ Este documento separa o que existe do que ainda precisa ser feito. Itens abaixo 
 ### Validação visual pendente
 
 - registrar comparação em desktop e celular da direção editorial implementada;
-- validar contraste medido dos 65 temas de trilha e de todos os estados interativos;
+- validar contraste medido dos 66 temas de trilha e de todos os estados interativos;
 - verificar a interface completa em aparelhos físicos e com leitor de tela quando autorizado.
 
 ## Próxima evolução do produto
 
-- revisar as 65 trilhas com especialistas das áreas financeira, educacional, jurídica, trabalhista, assistencial, regulatória, clínica, institucional, internacional, estatística, midiática, doméstica e de proteção;
+- revisar as 68 trilhas com especialistas das áreas financeira, educacional, jurídica, trabalhista, assistencial, regulatória, clínica, institucional, internacional, estatística, midiática, doméstica, viária, alimentar e de proteção;
 - decidir se checklist deve persistir sem ampliar coleta de dados;
 - ampliar testes de rota e renderização em navegador.
 
 ## Eixos concluídos
 
-O catálogo foi consolidado na versão 3.9.0 em sete eixos de navegação. Todas as 65 trilhas possuem um único eixo principal, enquanto relações secundárias permanecem no glossário. A matriz de fronteiras, fontes e pendências está em `content-audit.md`; a classificação não representa recomendação nem substitui revisão especializada.
+O catálogo foi consolidado na versão 3.9.0 em sete eixos de navegação e fechado para expansões gerais na versão 4.2.0. Todas as 68 trilhas possuem um único eixo principal, enquanto relações secundárias permanecem no glossário. Novos conteúdos dependem de uma necessidade concreta e revisão explícita deste roadmap; manutenção editorial, correção e atualização de fontes continuam permitidas. A matriz de fronteiras, fontes e pendências está em `content-audit.md`.
 
 Finanças e economia introdutórias foram concluídas na versão 2.5.0 com planejamento, proteção, previdência, renda autônoma, aquisição de bens, juros, câmbio, atividade e políticas econômicas. O eixo permanece sujeito a manutenção editorial, revisão de fontes e correções; produtos específicos, projeções, simuladores e aconselhamento individual continuam fora do escopo.
 
@@ -45,6 +45,8 @@ Brasil e mundo foi concluído na versão 3.1.0 com comércio e cadeias globais, 
 Informação e decisão foi concluído na versão 3.5.0 com evidência, fontes, estatística cotidiana, gráficos, pesquisas, causalidade, argumentos, vieses, persuasão, desinformação, verificação e decisão sob incerteza. O eixo permanece sujeito a manutenção editorial e revisão especializada; classificação automática, fact-checking, detector de IA, cálculo individual e aconselhamento continuam fora do escopo.
 
 Os gaps prioritários de vida prática foram ampliados na versão 3.11.0 com manutenção doméstica segura e cuidados preventivos na internet. Reparos domésticos deixaram de ser uma exclusão ampla, mas intervenções técnicas ou perigosas, diagnóstico, catálogo de ferramentas e indicação de profissionais continuam fora do escopo. Vestibulares, vida acadêmica, carreira avançada, catálogo de benefícios e cálculos tarifários também permanecem fora.
+
+Mobilidade cotidiana e rotina alimentar foram cobertas na versão local 4.2.0. A primeira explica planejamento, documentos, competências e resposta segura a ocorrências sem ensinar direção ou atribuir culpa. A segunda cobre compra, rótulo, conservação, contaminação cruzada e saneantes sem prescrever dieta, diagnosticar ou fornecer receitas. Permanecem pendentes revisões especializadas em trânsito e segurança dos alimentos.
 
 ## Tema excluído do Cícero
 
@@ -59,3 +61,11 @@ Defesa, conflitos e paz não será incorporado ao Cícero. Estratégia, operaç�
 - simuladores que dependam de taxas ou regras temporárias;
 - orientação jurídica ou financeira individual;
 - backend e banco de dados.
+
+## Mecânica básica — 4.1.0 local
+
+Cobertos sistemas, sinais contextualizados, manutenção e contratação de oficina em 03.06. Permanecem fora do escopo diagnóstico, reparos, motos, GNV e tração híbrida/elétrica. Pendente revisão por profissional de mecânica; publicação desta versão não solicitada. Nenhuma pendência de auditoria especializada anterior é encerrada por esta entrega.
+
+## Fechamento do catálogo — 4.2.0 local
+
+As trilhas 03.07 e 03.08 encerram as expansões gerais aprovadas. Limpeza pesada, lavanderia, controle de pragas, tutoriais de direção, primeiros socorros e alimentação clínica permanecem fora. A partir deste marco, o trabalho editorial se concentra em revisão especializada, correções e atualização de referências. Commit, push e publicação não foram solicitados.

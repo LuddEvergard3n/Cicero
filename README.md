@@ -1,11 +1,13 @@
 # Cicero
 
-Cicero is a static educational platform that introduces practical adult-life decisions to Brazilians aged 16 to 24. Version 4.0.0 organizes 65 learning paths into seven areas and provides search, local progress tracking, accessibility preferences, responsive navigation, and PWA installation.
+Cicero is a static educational platform that introduces practical adult-life decisions to Brazilians aged 16 to 24. Local version 4.2.0 organizes 68 learning paths into seven areas and provides search, local progress tracking, accessibility preferences, responsive navigation, and PWA installation.
 
 The content offers general education, not individualized financial, legal, medical, political, or professional advice.
 
 - Live site: [luddevergard3n.github.io/Cicero](https://luddevergard3n.github.io/Cicero/)
 - Repository: [LuddEvergard3n/Cicero](https://github.com/LuddEvergard3n/Cicero)
+
+Version 4.2.0 adds everyday mobility and traffic (path 03.07) plus food and household safety (path 03.08): 324 glossary terms and 180 sources in total. All 68 paths received a structural readability review and all references were checked again on 2026-10-25. This is an editorial and technical review, not specialist certification; professional traffic, food-safety and mechanical reviews remain pending. See [content audit](docs/content-audit.md), [risk audit](docs/risk-audit.md) and [test results](docs/testing.md).
 
 ## Principles
 

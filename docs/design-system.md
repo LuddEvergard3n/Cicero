@@ -93,7 +93,7 @@ Falhas no carregamento editorial reutilizam a composição da rota inexistente, 
 ## Política de manutenção
 
 - Reutilize os tokens e componentes existentes antes de criar variações.
-- Uma nova trilha deve receber cores com contraste verificado e um seletor pelo ID estável. A versão 3.11 possui 65 temas; em tema escuro ou alto contraste, a legibilidade prevalece sobre a diferenciação cromática.
+- Uma nova trilha deve receber cores com contraste verificado e um seletor pelo ID estável. A versão 4.1 possui 66 temas; em tema escuro ou alto contraste, a legibilidade prevalece sobre a diferenciação cromática.
 - Um novo eixo deve reutilizar o cartão neutro existente e relacionar apenas IDs publicados; não crie cor ou componente próprio sem necessidade comprovada.
 - Não carregue assets externos em tempo de execução.
 - Atualize este documento quando tokens, componentes, breakpoints ou regras de acessibilidade forem alterados.
@@ -102,3 +102,11 @@ Falhas no carregamento editorial reutilizam a composição da rota inexistente, 
 As trilhas 59 a 63 não introduzem componente novo. Elas usam os cartões, etapas, cenário, checklist, glossário e fontes existentes; apenas os seletores `data-track` recebem combinações de cor já aprovadas, evitando uma segunda linguagem visual para o mesmo tipo de conteúdo.
 
 As trilhas de reparos domésticos e cuidados na internet seguem a mesma regra. Reparos reutiliza `#66513c/#eee2d6`; internet reutiliza `#315f72/#d6e7ed`. Nenhum ícone, alerta especial ou componente novo foi criado.
+
+## Tema 4.1.0
+
+`mecanica-basica-carro` reutiliza `#705331/#ede1d1`; permanece sujeito aos temas escuro, alto contraste e cores forçadas existentes. O quadro usa a tabela semântica e região de rolagem atuais, sem componente ou imagem nova.
+
+## Temas 4.2.0
+
+`mobilidade-transito-cotidiano` reutiliza `#3d5f70/#dbe7ed`; `alimentacao-seguranca-casa` reutiliza `#3e6548/#dbe9dd`. Ambas permanecem sujeitas aos temas escuro, alto contraste e cores forçadas existentes. Não foram criados ícones, tabelas, alertas ou componentes novos.

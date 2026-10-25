@@ -24,11 +24,11 @@ Escolha a fonte conforme a pergunta. Para saber o conteúdo de uma lei, use o te
 
 Legislação, atos oficiais, órgãos responsáveis, registros primários e literatura acadêmica ou técnica podem cumprir funções diferentes. Nenhuma categoria ou autoridade garante, isoladamente, que uma afirmação esteja correta ou bem sustentada.
 
-Fontes comerciais podem servir como objeto de comparação, nunca como autoridade única sobre o próprio produto. Não use resultados de busca, agregadores ou postagens sociais como fonte final.
+Documentação técnica primária de fabricantes pode sustentar funções e sinais mecânicos, com interesse comercial identificado e escopo delimitado. Não serve como autoridade única para recomendar o próprio produto, oficina ou peça. Não use resultados de busca, agregadores ou postagens sociais como fonte final.
 
 Cada referência recebe ID, título, organização e URL em `data/content.json`. Links devem ser verificados antes da publicação. A existência de uma fonte não transfere automaticamente validade a todo o texto: a relação entre a afirmação e a fonte precisa ser revisada.
 
-O resultado da revisão geral de 18 de outubro de 2026 está registrado em [auditoria de conteúdo](content-audit.md). Bloqueio antirrobô ou exigência de JavaScript deve ser documentado e não pode ser descrito como indisponibilidade definitiva da fonte.
+O resultado da auditoria substantiva de 18 de outubro de 2026 e da revisão geral de legibilidade de 25 de outubro de 2026 está registrado em [auditoria de conteúdo](content-audit.md). Bloqueio antirrobô ou exigência de JavaScript deve ser documentado e não pode ser descrito como indisponibilidade definitiva da fonte.
 
 ## Eixos editoriais
 
@@ -335,3 +335,15 @@ Cuidados na internet devem ensinar prevenção geral: bloqueio de tela, atualiza
 - Conferir linguagem, termos e relações com outras trilhas.
 - Executar testes estruturais e leitura completa da trilha.
 - Registrar no roadmap qualquer lacuna conhecida que não impeça a publicação.
+
+## Sinais mecânicos — revisão de 25/10/2026
+
+Ruído e situação são observações, não diagnósticos. Cada associação específica deve possuir referência; sem suporte suficiente, manter o nível de sistema e a necessidade de inspeção. Manual específico não estabelece regra universal. Não incorporar publicidade, intervalos ou pressões universais, instruções de reparo ou autorização para seguir viagem. Diferenciar pressão do óleo de lembrete de troca. Revisão editorial interna não equivale a avaliação por profissional de mecânica.
+
+## Mobilidade e trânsito — revisão de 25/10/2026
+
+Separar planejamento do deslocamento, serviço prestado, documento oficial e resposta a uma ocorrência. Não apresentar um meio como universalmente melhor, reproduzir taxas, prazos, pontos ou calendários, atribuir culpa ou fornecer instrução de primeiros socorros. Orientação institucional limitada a rodovia federal deve ser identificada como tal e não pode ser generalizada para vias municipais, estaduais ou concedidas. Revisão editorial interna não equivale a avaliação por especialista em trânsito, direito ou atendimento de emergência.
+
+## Alimentação e saneantes — revisão de 25/10/2026
+
+Tratar compra, rótulo, conservação, separação e limpeza como práticas gerais, sem prescrição nutricional, diagnóstico ou determinação remota de segurança. Não publicar validade, tempo ou temperatura universal. Cheiro e aparência não comprovam segurança. Produtos de limpeza permanecem na embalagem original, seguem o rótulo e não são misturados nem neutralizados por improviso. Revisão editorial interna não equivale a avaliação por nutricionista, profissional de vigilância sanitária ou toxicologista.

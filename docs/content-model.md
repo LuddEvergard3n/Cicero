@@ -10,7 +10,7 @@
 |---|---|---|
 | `reviewedAt` | `string` | Data ISO `AAAA-MM-DD` da revisão editorial geral. |
 | `axes` | `Axis[]` | Sete agrupamentos de navegação; cada trilha aparece exatamente uma vez. |
-| `tracks` | `Track[]` | Exatamente 65 trilhas na versão 3.11.0. |
+| `tracks` | `Track[]` | Exatamente 68 trilhas na versão 4.2.0. |
 | `terms` | `Term[]` | Glossário com IDs únicos. |
 | `sources` | `Source[]` | Referências institucionais com IDs únicos. |
 
@@ -107,4 +107,12 @@ Table {
 
 ## Validação atual
 
-O teste confirma arquivos essenciais, sete eixos, atribuição exclusiva das 65 trilhas, 306 termos, 167 fontes, unicidade de IDs, campos mínimos, limites do índice de resposta, contrato e referências das tabelas, relações com termos e fontes, domínios institucionais permitidos, normalização e ranking da busca e persistência do progresso. Ele também protege os limites textuais das trilhas de reparos domésticos e cuidados na internet. Não valida qualidade pedagógica, segurança técnica no local, correção educacional, jurídica, trabalhista, assistencial, regulatória, fiscal, clínica, estatística ou internacional, vigência da fonte ou legibilidade do texto.
+O teste confirma arquivos essenciais, sete eixos, atribuição exclusiva das 68 trilhas, 324 termos, 180 fontes, unicidade de IDs, campos mínimos, limites do índice de resposta, contrato e referências das tabelas, relações com termos e fontes, domínios institucionais permitidos, normalização e ranking da busca e persistência do progresso. Ele também protege limites textuais de reparos, internet, mecânica, mobilidade e segurança alimentar. Não valida qualidade pedagógica, segurança técnica no local, correção educacional, jurídica, trabalhista, assistencial, regulatória, fiscal, clínica, estatística, viária ou internacional, vigência da fonte ou legibilidade do texto.
+
+## Mecânica básica — 4.1.0
+
+Uma trilha, oito termos e cinco fontes foram acrescentados sem novos campos. `sinais-carro-contexto` possui quatro colunas e seis linhas; omite `effectiveAt`, pois não é uma fotografia de alíquotas ou valores. A revisão parcial está na auditoria, sem alterar `reviewedAt` geral. A validação permite somente os hosts técnicos adicionais `www.fordservicecontent.com`, `am.boschcarservice.com` e `www.nakata.com.br`.
+
+## Mobilidade e alimentação — 4.2.0
+
+Duas trilhas, dez termos e oito fontes oficiais foram acrescentados sem novos campos ou hosts. Cenários e checklists continuam efêmeros; somente a conclusão usa `cicero-progress-v1`. A revisão parcial consta nas auditorias e não altera `reviewedAt` geral.

@@ -1,5 +1,5 @@
 {
-  "reviewedAt": "2026-10-18",
+  "reviewedAt": "2026-10-25",
   "axes": [
     {
       "id": "dinheiro-consumo",
@@ -16,8 +16,8 @@
     {
       "id": "moradia-servicos",
       "title": "Moradia e serviços",
-      "summary": "Confira aluguel, atendimento público, reclamações de consumo e serviços essenciais da casa.",
-      "tracks": ["aluguel-moradia", "servicos-essenciais-moradia", "reparos-manutencao-casa", "servicos-publicos-atendimento", "reclamacao-consumidor"]
+      "summary": "Confira moradia, serviços, consumo, cuidados com o carro, deslocamentos e segurança na rotina da casa.",
+      "tracks": ["aluguel-moradia", "servicos-essenciais-moradia", "reparos-manutencao-casa", "servicos-publicos-atendimento", "reclamacao-consumidor", "mecanica-basica-carro", "mobilidade-transito-cotidiano", "alimentacao-seguranca-casa"]
     },
     {
       "id": "direitos-saude-protecao",
@@ -3058,6 +3058,268 @@
       "checklist": ["Meu dispositivo está protegido e atualizado.", "Minhas contas importantes usam credenciais diferentes.", "Configurei segundo fator e meios de recuperação.", "Verifiquei a cópia dos arquivos importantes.", "Revisei permissões, aplicativos e sessões antigas."],
       "terms": ["gerenciador-de-senhas", "backup", "atualizacao-de-seguranca", "recuperacao-de-conta", "permissao-de-aplicativo", "verificacao-duas-etapas", "credencial", "dado-pessoal", "golpe", "engenharia-social"],
       "sources": ["certbr-fasciculos", "anatel-seguranca-digital", "govbr-seguranca", "govbr-golpes-digitais", "anpd-titular"]
+    },
+    {
+      "id": "mecanica-basica-carro",
+      "title": "Mecânica básica: sinais e cuidados com o carro",
+      "summary": "Conheça sistemas do carro, descreva sinais sem diagnosticar peças e acompanhe manutenção e atendimento na oficina.",
+      "question": "O carro fez um barulho, acendeu uma luz ou começou a se comportar diferente. O que observar e quando procurar ajuda?",
+      "objectives": [
+        "Reconhecer a função dos principais sistemas e algumas peças.",
+        "Descrever um sintoma sem presumir sua causa.",
+        "Distinguir observação externa de intervenção mecânica.",
+        "Consultar o manual e registrar manutenção e contratação."
+      ],
+      "steps": [
+        {
+          "title": "Entenda os sistemas",
+          "body": "Em um carro a combustão, o motor produz movimento, a lubrificação reduz atrito e o arrefecimento controla a temperatura. A transmissão leva movimento às rodas; suspensão e amortecedores controlam oscilações; a direção orienta as rodas; freios e pneus participam da parada e do contato com o piso. O sistema elétrico alimenta equipamentos e a partida. Essas funções ajudam a conversar com a oficina, mas não identificam defeito pelo som."
+        },
+        {
+          "title": "Descreva o que aconteceu",
+          "body": "Depois de parar em segurança, registre quando o sinal apareceu: partida, aceleração, frenagem, curva, piso irregular e motor frio ou quente. Velocidade é o deslocamento do carro; rotação é o giro do motor, e as duas não variam sempre juntas. Descreva som, duração, luzes e mudanças sem escolher uma peça. Não reproduza o defeito, provoque frenagens de teste nem use celular ao dirigir."
+        },
+        {
+          "title": "Reconheça sinais que exigem interrupção",
+          "body": "Perda ou alteração importante de frenagem ou direção, fumaça, cheiro de combustível, superaquecimento e advertências críticas exigem interromper o uso e pedir assistência. Busque uma parada segura, sem manobra brusca ou teste. Não saia para área exposta nem entre na pista para inspecionar o carro. Consulte o manual e acione assistência ou emergência. Uma descrição pela internet não autoriza seguir viagem."
+        },
+        {
+          "title": "Interprete painel e ruídos no contexto",
+          "body": "Considere símbolo, cor, momento e permanência da luz junto da instrução do manual. Algumas aparecem na verificação inicial; cor isolada não define o significado. Aviso de pressão do óleo com o motor funcionando é diferente de lembrete de troca: não suponha que basta completar óleo. O manual Ford citado é de um veículo específico, não uma regra universal. O quadro organiza o relato de ruídos, não fornece diagnóstico."
+        },
+        {
+          "title": "Faça verificações externas e acompanhe a manutenção",
+          "body": "Com o carro estacionado em segurança, observe pneus, luzes, limpadores e sinais de vazamento sem desmontar ou tocar em partes quentes e fluidos desconhecidos. Confira histórico e manual: pressão, especificações e intervalos variam. Ausência de ruído não comprova bom estado. A trilha não ensina troca de peças, uso de macaco, entrada sob o carro, reparo de freios ou intervenção elétrica; também não cobre motos, GNV ou tração híbrida e elétrica."
+        },
+        {
+          "title": "Entenda fluidos, bateria e partida",
+          "body": "Óleo do motor lubrifica; fluido de arrefecimento controla temperatura; fluido de freio transmite pressão. Eles não são intercambiáveis. Não abra o arrefecimento quente, misture fluidos nem trate completar vazamento como solução. A bateria fornece energia e o sistema de partida põe o motor em giro; girar não garante funcionamento. Registre se não gira, gira lentamente ou gira sem funcionar. Não tente ligação auxiliar, partida forçada, desmontagem ou diagnóstico por áudio e scanner."
+        },
+        {
+          "title": "Converse com a oficina",
+          "body": "Leve o relato e o histórico de manutenção. Peça diagnóstico e orçamento com serviços, materiais, preço, prazo e condições; autorize adicionais antes da execução. Guarde orçamento, autorização, nota ou recibo e descrição do serviço. Fontes de fabricantes e redes têm interesse comercial e são usadas somente para explicar funções e sinais, sem recomendar marca, oficina ou peça. O Cícero não substitui inspeção profissional."
+        }
+      ],
+      "tables": [
+        {
+          "id": "sinais-carro-contexto",
+          "title": "Sinais do carro: contexto e limites",
+          "description": "Registre o que foi percebido sem provocar o sintoma. As possibilidades abaixo não identificam uma peça defeituosa.",
+          "headers": [
+            "Sinal e situação",
+            "Sistemas ou peças que podem estar envolvidos",
+            "O que registrar",
+            "Encaminhamento e limite"
+          ],
+          "rows": [
+            [
+              "Ruído ao frear",
+              "Sistema de freios, incluindo pastilhas e discos; o ruído não distingue a causa.",
+              "Quando ocorreu e se houve mudança no pedal, resposta ou trajetória na frenagem.",
+              "Peça inspeção mesmo diante de ruído isolado. Alteração do pedal ou da frenagem exige parada segura, interrupção do uso e assistência; não teste com frenagens fortes. Referência: Bosch."
+            ],
+            [
+              "Estalos em curvas",
+              "Transmissão: junta homocinética é uma possibilidade descrita pela Nakata, não confirmação de defeito.",
+              "Curva e condição em que ocorreu, apenas a partir do que já percebeu.",
+              "Solicite inspeção; não faça curvas ou acelerações para reproduzir o estalo e não compre peça com base no som. Referência: Nakata."
+            ],
+            [
+              "Vibração no volante",
+              "Durante a frenagem, o sistema de freios pode estar envolvido. Durante o deslocamento, este quadro não atribui causa ou peça.",
+              "Se ocorreu ao frear ou durante deslocamento, sem repetir a situação para testar.",
+              "Avaliação profissional deve considerar o conjunto do veículo. Mudança de frenagem ou direção exige parada segura e assistência. Referência: Bosch para vibração ao frear; não é evidência para diagnosticar a vibração em movimento."
+            ],
+            [
+              "Batidas em irregularidades do piso",
+              "Suspensão e fixações são conjuntos a inspecionar; não há aqui associação comprovada a uma peça específica.",
+              "Piso, momento e outras alterações percebidas, sem passar novamente na irregularidade.",
+              "Solicite avaliação do conjunto. A referência preventiva do DNIT não permite concluir que o amortecedor está defeituoso pelo som."
+            ],
+            [
+              "Dificuldade de partida",
+              "Partida e funcionamento do motor precisam ser distinguidos; o relato sozinho não identifica bateria ou outro componente defeituoso.",
+              "Motor não gira, gira lentamente ou gira sem entrar em funcionamento; advertências já observadas.",
+              "Consulte o manual correspondente e assistência. Não faça partida forçada nem ligação auxiliar por estas orientações. Referência: Ford para contexto das advertências, sem diagnóstico da causa de partida."
+            ],
+            [
+              "Aumento de temperatura ou advertência de arrefecimento",
+              "Sistema de arrefecimento; a advertência não identifica o componente responsável.",
+              "Símbolo, mensagem e momento, sem abrir o sistema nem tocar em peças quentes.",
+              "Busque parada segura, interrompa o uso e solicite assistência conforme o manual. Não abra o sistema quente nem suponha que completar fluido resolve. Referência: Ford, exemplo específico de advertência."
+            ]
+          ],
+          "note": "Ausência de ruído não comprova bom estado. Estes exemplos não determinam se é seguro seguir viagem e não indicam substituição de peças. A advertência e o procedimento do manual correspondente ao veículo prevalecem; associações possíveis dependem de inspeção profissional.",
+          "sources": [
+            "dnit-manutencao-veiculo",
+            "ford-manual-advertencias",
+            "bosch-sinais-freios",
+            "nakata-sinais-homocinetica"
+          ]
+        }
+      ],
+      "scenario": {
+        "prompt": "Há ruído metálico ao frear acompanhado de mudança no pedal. Um conhecido atribui o problema à pastilha e recomenda esperar.",
+        "options": [
+          "Continuar usando porque a peça já foi identificada pelo som.",
+          "Fazer frenagens fortes para testar.",
+          "Buscar uma parada segura, interromper o uso e solicitar assistência e avaliação."
+        ],
+        "correct": 2,
+        "explanation": "A alteração da frenagem exige interromper o uso com uma parada segura e solicitar assistência. O som não confirma defeito da pastilha ou de outra peça; frenagens de teste podem aumentar o risco."
+      },
+      "checklist": [
+        "Registrei as condições do sintoma sem provocar o defeito.",
+        "Reconheci os sinais que exigem interrupção e assistência.",
+        "Consultei o manual correspondente ao veículo.",
+        "Conferi o histórico e o plano de manutenção.",
+        "Solicitei diagnóstico e orçamento discriminado.",
+        "Preservei autorizações e comprovantes do serviço."
+      ],
+      "terms": [
+        "pastilha-de-freio",
+        "disco-de-freio",
+        "amortecedor",
+        "junta-homocinetica",
+        "sistema-de-arrefecimento",
+        "lubrificacao-motor",
+        "bateria-automotiva",
+        "sistema-de-partida",
+        "manutencao-preventiva",
+        "orcamento-de-servico",
+        "garantia",
+        "contrato",
+        "emergencia"
+      ],
+      "sources": [
+        "prf-orientacoes-veiculo",
+        "dnit-manutencao-veiculo",
+        "ford-manual-advertencias",
+        "bosch-sinais-freios",
+        "nakata-sinais-homocinetica",
+        "cdc-contratos",
+        "consumidor-gov"
+      ]
+    },
+    {
+      "id": "mobilidade-transito-cotidiano",
+      "title": "Mobilidade e trânsito no cotidiano",
+      "summary": "Planeje deslocamentos, consulte serviços de trânsito e responda a ocorrências sem presumir culpa.",
+      "question": "Preciso me deslocar, consultar um documento ou lidar com uma ocorrência no trânsito. O que devo verificar antes de agir?",
+      "objectives": [
+        "Comparar deslocamentos por tempo, custo total, acessibilidade, confiabilidade e possibilidade de retorno.",
+        "Identificar operador, órgão e esfera responsáveis.",
+        "Consultar documentos e serviços de trânsito em canais oficiais.",
+        "Agir com segurança após uma ocorrência, sem atribuir responsabilidade jurídica."
+      ],
+      "steps": [
+        {
+          "title": "Planeje o deslocamento completo",
+          "body": "Confira rota, horários, integrações, custo total, acessibilidade, condições previstas e retorno. Considere as necessidades da viagem e as informações disponíveis: nenhum meio é universalmente mais rápido, barato, acessível ou confiável. O Cícero não oferece rota ao vivo nem substitui avisos do operador e da autoridade local."
+        },
+        {
+          "title": "Identifique o serviço e o responsável",
+          "body": "Diferencie deslocamento a pé ou de bicicleta, transporte urbano municipal, serviço intermunicipal ou interestadual, táxi, aplicativo e veículo particular. Execução, regulamentação e fiscalização podem pertencer a instituições diferentes. Confirme operador, território e órgão competente no portal oficial antes de reclamar ou enviar documentos."
+        },
+        {
+          "title": "Consulte documentos em canal oficial",
+          "body": "Use o portal ou aplicativo oficial correspondente para consultar CNH, CRLV, infrações, restrições e recall do veículo. Verifique o serviço exato e seu responsável sem confiar em links recebidos por mensagem. Taxas, prazos, pontuação, licenciamento e procedimentos mudam e não são reproduzidos nesta trilha."
+        },
+        {
+          "title": "Reduza riscos durante o deslocamento",
+          "body": "Observe a sinalização e as regras vigentes, planeje antes de sair e não use o celular enquanto dirige ou se desloca em situação que exija atenção ao ambiente. Não improvise travessias, paradas ou rotas perigosas para ganhar tempo. Esta orientação geral não substitui formação de condutores, avaliação local nem instrução da autoridade competente."
+        },
+        {
+          "title": "Responda a uma ocorrência",
+          "body": "Priorize sua segurança e identifique vítimas, perigo imediato, obstrução ou outro risco. Procure a emergência ou autoridade competente e siga suas instruções. Não entre na pista, não permaneça em área exposta, não mova pessoa ferida por iniciativa própria nem aplique regra universal à movimentação dos veículos. A orientação da PRF citada vale para rodovias federais; vias municipais, estaduais e concedidas podem exigir outros canais e procedimentos."
+        },
+        {
+          "title": "Registre e encaminhe",
+          "body": "Somente quando for seguro, preserve fatos como local, horário, envolvidos, veículo, operador, danos visíveis, protocolo e informações do seguro. Compartilhe apenas os dados necessários com o canal competente. O registro não determina causa, culpa, responsabilidade, indenização ou obrigação de cobertura; procure orientação adequada quando houver conflito."
+        }
+      ],
+      "scenario": {
+        "prompt": "Após uma colisão em via movimentada, pode haver uma pessoa ferida. Alguém sugere permanecer na pista filmando e discutir quem teve culpa antes de pedir ajuda.",
+        "options": [
+          "Permanecer na pista para registrar tudo antes que os veículos sejam movidos.",
+          "Mover imediatamente pessoas e veículos, sem avaliar o risco.",
+          "Proteger-se, sinalizar apenas se isso puder ser feito com segurança, comunicar localização e possíveis vítimas ao serviço competente e seguir suas instruções."
+        ],
+        "correct": 2,
+        "explanation": "A prioridade é reduzir a exposição e comunicar possíveis vítimas ao serviço competente. Filmar na pista ou movimentar pessoas e veículos sem avaliar o local pode ampliar o risco. A causa e a responsabilidade não são determinadas no momento pela opinião dos envolvidos."
+      },
+      "checklist": [
+        "Planejei o deslocamento e a possibilidade de retorno.",
+        "Identifiquei o operador ou órgão responsável.",
+        "Consultei documentos e alertas em canal oficial.",
+        "Considerei o risco imediato e a existência de possíveis vítimas.",
+        "Preservei protocolos e informações relevantes quando isso era seguro.",
+        "Não presumi nem expus publicamente culpa ou causa."
+      ],
+      "terms": ["mobilidade-urbana", "cnh", "crlv", "recall-veicular", "sinistro-de-transito", "servico-publico", "orgao-publico", "emergencia", "protocolo", "seguro", "sinistro"],
+      "sources": ["lei-mobilidade-urbana", "govbr-servicos-transito", "codigo-transito-brasileiro", "prf-acidentes-rodovias", "prf-orientacoes-veiculo", "anatel-servicos-emergencia"]
+    },
+    {
+      "id": "alimentacao-seguranca-casa",
+      "title": "Alimentação e segurança na rotina da casa",
+      "summary": "Planeje compras, conserve alimentos e use produtos de limpeza sem misturas ou improvisações.",
+      "question": "Vou comprar, guardar e preparar alimentos. Como reduzir desperdício, contaminação e acidentes domésticos?",
+      "objectives": [
+        "Planejar compras conforme consumo, orçamento e capacidade de armazenamento.",
+        "Conferir integridade, rótulo, conservação e validade.",
+        "Reduzir contaminação durante armazenamento e preparo.",
+        "Usar produtos de limpeza doméstica sem misturas ou improvisações."
+      ],
+      "steps": [
+        {
+          "title": "Planeje compra e uso",
+          "body": "Confira os alimentos disponíveis, as pessoas atendidas, o orçamento, o espaço de armazenamento e a possibilidade real de consumo antes de comprar. Planejamento ajuda a reduzir desperdício, mas não produz dieta, cardápio, meta de peso ou orientação nutricional individual."
+        },
+        {
+          "title": "Examine produto e rótulo",
+          "body": "Verifique integridade da embalagem, identificação de origem, lista de ingredientes, advertências aplicáveis, prazo de validade e instruções de conservação e preparo. O rótulo fornece informações necessárias, mas não é garantia isolada de que um alimento concreto permaneceu seguro em todas as etapas."
+        },
+        {
+          "title": "Transporte e armazene",
+          "body": "Proteja os produtos durante o transporte, dê atenção aos que exigem conservação específica e siga o rótulo e as orientações oficiais aplicáveis. Separe alimentos crus daqueles prontos para consumo e mantenha recipientes protegidos e identificados. Esta trilha não publica tempo ou temperatura universal porque produto, equipamento e condição variam."
+        },
+        {
+          "title": "Evite contaminação cruzada",
+          "body": "Cuide das mãos, superfícies e utensílios e evite que líquidos, embalagens ou instrumentos usados em alimento cru alcancem alimento pronto para consumo. Siga as instruções do produto e as orientações sanitárias aplicáveis. O objetivo é organizar uma prática segura, não ensinar receita ou avaliar uma cozinha à distância."
+        },
+        {
+          "title": "Trate sobras e dúvidas com cautela",
+          "body": "Identifique quando o alimento foi preparado e como foi protegido e armazenado. Cheiro e aparência isolados não comprovam segurança. Quando não for possível confirmar as condições de conservação pelas orientações aplicáveis, não prove o alimento para testar nem determine pela internet que ele está seguro."
+        },
+        {
+          "title": "Use saneantes pelo rótulo",
+          "body": "Use produto regularizado, preserve a embalagem original e siga rótulo, diluição e ventilação indicados. Não misture produtos de limpeza, salvo quando o próprio rótulo autorizar expressamente a combinação. Não tente neutralizar uma mistura adicionando outro produto e mantenha saneantes separados de alimentos, crianças e animais."
+        },
+        {
+          "title": "Procure atendimento quando necessário",
+          "body": "Diante de consumo suspeito, sintomas ou exposição relevante a produto de limpeza, interrompa o consumo ou a exposição, preserve embalagem e rótulo e procure atendimento de saúde ou orientação toxicológica. O Cícero não diagnostica intoxicação, alergia ou doença transmitida por alimento e não fornece tratamento."
+        }
+      ],
+      "scenario": {
+        "prompt": "Líquido de um alimento cru vazou sobre um alimento pronto para consumo. Alguém sugere enxaguar, provar e servir normalmente.",
+        "options": [
+          "Enxaguar e provar uma pequena quantidade.",
+          "Cozinhar apenas o alimento cru e manter o alimento pronto que foi atingido.",
+          "Separar os itens, não servir o alimento pronto exposto, higienizar utensílios e superfície conforme as orientações aplicáveis e reiniciar o preparo com ingredientes não contaminados."
+        ],
+        "correct": 2,
+        "explanation": "O contato pode transferir contaminantes ao alimento pronto. Enxaguar ou provar não comprova segurança. A medida prudente é interromper o uso do item exposto e refazer a preparação com separação adequada."
+      },
+      "checklist": [
+        "Planejei a compra conforme consumo e armazenamento.",
+        "Conferi embalagem, rótulo e validade.",
+        "Transportei e conservei os produtos conforme as orientações.",
+        "Mantive alimentos crus separados dos prontos para consumo.",
+        "Identifiquei e protegi as sobras.",
+        "Mantive saneantes na embalagem original e não improvisei misturas."
+      ],
+      "terms": ["planejamento-alimentar", "rotulagem-de-alimentos", "data-de-validade", "contaminacao-cruzada", "saneante", "orcamento", "consumo", "risco", "emergencia"],
+      "sources": ["ms-guias-alimentares", "anvisa-boas-praticas-alimentos", "anvisa-rotulagem-alimentos", "anvisa-mistura-produtos-limpeza"]
     }
   ],
   "terms": [
@@ -4110,7 +4372,57 @@
     {"id": "backup", "name": "Backup", "definition": "Cópia separada usada para recuperar dados perdidos, alterados ou danificados."},
     {"id": "atualizacao-de-seguranca", "name": "Atualização de segurança", "definition": "Correção distribuída pelo responsável pelo sistema ou aplicativo para tratar falhas e riscos."},
     {"id": "recuperacao-de-conta", "name": "Recuperação de conta", "definition": "Meios e processo usados para retomar o acesso legítimo a uma conta."},
-    {"id": "permissao-de-aplicativo", "name": "Permissão de aplicativo", "definition": "Autorização concedida a um aplicativo para acessar recurso ou dado do dispositivo."}
+    {"id": "permissao-de-aplicativo", "name": "Permissão de aplicativo", "definition": "Autorização concedida a um aplicativo para acessar recurso ou dado do dispositivo."},
+    {
+      "id": "pastilha-de-freio",
+      "name": "Pastilha de freio",
+      "definition": "Componente de atrito que, em um freio a disco, é pressionado contra o disco para reduzir o movimento da roda. Ruído não confirma seu desgaste nem indica sozinho a causa de uma falha."
+    },
+    {
+      "id": "disco-de-freio",
+      "name": "Disco de freio",
+      "definition": "Peça que gira com a roda e recebe o contato das pastilhas no sistema de freio a disco. Seu estado exige inspeção; vibração ou ruído não bastam para indicar substituição."
+    },
+    {
+      "id": "amortecedor",
+      "name": "Amortecedor",
+      "definition": "Componente da suspensão que controla oscilações do conjunto. Não é sinônimo de toda a suspensão, e uma batida no piso irregular não identifica sozinha defeito nessa peça."
+    },
+    {
+      "id": "junta-homocinetica",
+      "name": "Junta homocinética",
+      "definition": "Articulação da transmissão que permite transmitir movimento entre eixos em ângulos diferentes. Estalos em curvas podem envolver esse componente, mas dependem de inspeção para determinar a causa."
+    },
+    {
+      "id": "sistema-de-arrefecimento",
+      "name": "Sistema de arrefecimento",
+      "definition": "Conjunto que controla a temperatura de funcionamento do motor por troca de calor. Seus componentes e fluido dependem do veículo; o sistema quente não deve ser aberto."
+    },
+    {
+      "id": "lubrificacao-motor",
+      "name": "Lubrificação do motor",
+      "definition": "Circulação de óleo que reduz atrito e desgaste entre componentes do motor. Aviso de pressão do óleo não equivale a um simples lembrete de troca."
+    },
+    {
+      "id": "bateria-automotiva",
+      "name": "Bateria automotiva",
+      "definition": "Dispositivo que armazena energia elétrica e, no carro convencional, alimenta a partida e outros equipamentos. Dificuldade de partida não comprova defeito da bateria."
+    },
+    {
+      "id": "sistema-de-partida",
+      "name": "Sistema de partida",
+      "definition": "Conjunto que coloca o motor em movimento para iniciar seu funcionamento. Motor que não gira e motor que gira sem funcionar são relatos diferentes, não diagnósticos de uma peça."
+    },
+    {"id": "mobilidade-urbana", "name": "Mobilidade urbana", "definition": "Organização dos modos, serviços e infraestruturas usados para deslocar pessoas e cargas no espaço urbano."},
+    {"id": "cnh", "name": "Carteira Nacional de Habilitação — CNH", "definition": "Documento relacionado à habilitação de uma pessoa para conduzir veículos nas categorias e condições registradas."},
+    {"id": "crlv", "name": "Certificado de Registro e Licenciamento de Veículo — CRLV", "definition": "Documento que reúne dados de registro e licenciamento de um veículo conforme a situação consultada no serviço oficial."},
+    {"id": "recall-veicular", "name": "Recall veicular", "definition": "Chamamento do fornecedor para corrigir risco ou defeito identificado em veículos ou componentes abrangidos pela campanha."},
+    {"id": "sinistro-de-transito", "name": "Sinistro de trânsito", "definition": "Ocorrência no trânsito com consequências como lesão, morte ou dano, cuja causa e responsabilidade dependem de apuração."},
+    {"id": "planejamento-alimentar", "name": "Planejamento alimentar", "definition": "Organização de compras, preparo, consumo e armazenamento de alimentos conforme necessidades e recursos disponíveis, sem equivaler a prescrição nutricional."},
+    {"id": "rotulagem-de-alimentos", "name": "Rotulagem de alimentos", "definition": "Conjunto de informações apresentadas na embalagem para identificar composição, validade, conservação, advertências e outras características exigidas."},
+    {"id": "data-de-validade", "name": "Data de validade", "definition": "Prazo indicado pelo responsável pelo produto dentro do qual se aplicam as condições declaradas, desde que conservação e integridade sejam respeitadas."},
+    {"id": "contaminacao-cruzada", "name": "Contaminação cruzada", "definition": "Transferência de contaminantes entre alimentos, superfícies, utensílios, mãos ou embalagens durante armazenamento e preparo."},
+    {"id": "saneante", "name": "Saneante", "definition": "Produto destinado à limpeza, desinfecção ou outra finalidade sanitária, usado conforme rótulo e sem misturas improvisadas."}
   ],
   "sources": [
     {
@@ -4779,6 +5091,44 @@
     {"id": "cbmba-ambientes-domesticos", "title": "Ambientes domésticos", "organization": "Corpo de Bombeiros Militar da Bahia", "url": "https://www.ba.gov.br/bombeiros/ambientes-domesticos"},
     {"id": "inmetro-eletrodomestico-defeito", "title": "Defeito ou mau funcionamento de eletrodoméstico", "organization": "Instituto Nacional de Metrologia, Qualidade e Tecnologia", "url": "https://www.gov.br/inmetro/pt-br/acesso-a-informacao/perguntas-frequentes/avaliacao-da-conformidade/aparelhos-eletrodomesticos-e-similares/meu-eletrodomestico-apresentou-defeito-ou-mau-funcionamento-o-que-deve-fazer"},
     {"id": "certbr-fasciculos", "title": "Fascículos da Cartilha de Segurança para Internet", "organization": "CERT.br", "url": "https://cartilha.cert.br/fasciculos/"},
-    {"id": "anatel-seguranca-digital", "title": "Dicas de segurança e privacidade digital", "organization": "Agência Nacional de Telecomunicações", "url": "https://www.gov.br/anatel/pt-br/assuntos/dicas-contra-fraudes/dicas-de-seguranca"}
+    {"id": "anatel-seguranca-digital", "title": "Dicas de segurança e privacidade digital", "organization": "Agência Nacional de Telecomunicações", "url": "https://www.gov.br/anatel/pt-br/assuntos/dicas-contra-fraudes/dicas-de-seguranca"},
+    {
+      "id": "prf-orientacoes-veiculo",
+      "title": "Orientações de viagem",
+      "organization": "Polícia Rodoviária Federal",
+      "url": "https://www.gov.br/prf/pt-br/seguranca-viaria/orientacoes-de-viagem"
+    },
+    {
+      "id": "dnit-manutencao-veiculo",
+      "title": "Manutenção preventiva gera mais segurança no trânsito",
+      "organization": "Departamento Nacional de Infraestrutura de Transportes",
+      "url": "https://www.gov.br/dnit/pt-br/assuntos/noticias/manutencao-preventiva-gera-mais-seguranca-no-transito"
+    },
+    {
+      "id": "ford-manual-advertencias",
+      "title": "Luzes indicadoras e de advertência — manual específico",
+      "organization": "Ford Motor Company (fabricante; interesse comercial)",
+      "url": "https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1841481&Uid=G1841480&buildtype=web&countryCode=BRA&div=f&languageCode=pt&userMarket=bra&vFilteringEnabled=False&variantid=6303"
+    },
+    {
+      "id": "bosch-sinais-freios",
+      "title": "Manutenção dos freios",
+      "organization": "Bosch Car Service (rede comercial de serviços)",
+      "url": "https://am.boschcarservice.com/br/pt/nossos-servicos/sistema-de-freio/manutencao-dos-freios/"
+    },
+    {
+      "id": "nakata-sinais-homocinetica",
+      "title": "Indícios de que a junta homocinética pode estar comprometida",
+      "organization": "Nakata (fabricante; interesse comercial)",
+      "url": "https://www.nakata.com.br/sala-de-imprensa/indicios-de-que-a-junta-homocinetica-pode-estar-comprometida"
+    },
+    {"id": "lei-mobilidade-urbana", "title": "Lei nº 12.587 — Política Nacional de Mobilidade Urbana", "organization": "Presidência da República", "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12587.htm"},
+    {"id": "govbr-servicos-transito", "title": "Serviços de Trânsito", "organization": "Governo Federal", "url": "https://www.gov.br/pt-br/temas/servicos-de-transito"},
+    {"id": "codigo-transito-brasileiro", "title": "Lei nº 9.503 — Código de Trânsito Brasileiro", "organization": "Presidência da República", "url": "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm"},
+    {"id": "prf-acidentes-rodovias", "title": "Acidentes em rodovias federais — perguntas frequentes", "organization": "Ministério dos Transportes", "url": "https://www.gov.br/transportes/pt-br/assuntos/transporte-terrestre_/rodovias-federais/rodovias-federais-perguntas-frequentes-acidentes-em-rodovias"},
+    {"id": "ms-guias-alimentares", "title": "Guias Alimentares", "organization": "Ministério da Saúde", "url": "https://www.gov.br/saude/pt-br/composicao/saps/promocao-da-saude/guias-alimentares"},
+    {"id": "anvisa-boas-praticas-alimentos", "title": "Cartilha sobre Boas Práticas para Serviços de Alimentação", "organization": "Agência Nacional de Vigilância Sanitária", "url": "https://www.gov.br/anvisa/pt-br/arquivos-noticias-anvisa/812json-file-1/%40%40download/file"},
+    {"id": "anvisa-rotulagem-alimentos", "title": "Rotulagem de alimentos", "organization": "Agência Nacional de Vigilância Sanitária", "url": "https://www.gov.br/anvisa/pt-br/assuntos/alimentos/rotulagem"},
+    {"id": "anvisa-mistura-produtos-limpeza", "title": "Misturar produtos de limpeza não é uma boa ideia e pode ser perigoso", "organization": "Agência Nacional de Vigilância Sanitária", "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/misturar-produtos-de-limpeza-nao-e-uma-boa-ideia-e-pode-ser-perigoso"}
   ]
 }

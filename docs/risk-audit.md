@@ -35,3 +35,38 @@ Das 62 referências usadas pelas trilhas auditadas, 53 responderam diretamente n
 A publicação pode ocorrer como material educacional geral, desde que não seja anunciada como conteúdo certificado por especialistas nem como conformidade formal. A próxima revisão editorial deve priorizar a tabela fiscal datada e qualquer alteração regulatória posterior a `reviewedAt`.
 
 O leitor de tela NVDA não integra esta auditoria: sua execução foi interrompida e retirada do aceite por solicitação do usuário. A ausência desse teste permanece registrada em [acessibilidade](accessibility.md) e [compatibilidade](compatibility.md).
+
+## Mecânica básica — revisão interna de 25/10/2026
+
+Escopo: somente a nova trilha 03.06. Não constitui inspeção de veículo ou revisão por mecânico/engenheiro. O risco central é interpretar associação como diagnóstico ou autorização para continuar dirigindo.
+
+| Linha do quadro | Suporte e limite revisado |
+|---|---|
+| Ruído ao frear | Bosch relaciona sinais, pedal e inspeção de pastilhas/discos. Não confirma peça por ruído; mudança de frenagem exige interrupção segura. |
+| Estalos em curvas | Nakata descreve cliques durante curvas e homocinética. Possibilidade sem confirmação, sem instrução de reproduzir. |
+| Vibração no volante | Bosch sustenta trepidação ao frear. Vibração em deslocamento não recebe diagnóstico nem associação a peça. |
+| Batidas no piso | Fontes não sustentam peça específica. Suspensão e fixações são assuntos para inspeção; DNIT fornece apenas contexto preventivo, não prova causal. |
+| Partida | Separação descritiva entre não girar/girar lento/girar sem funcionar. Ford sustenta contexto de advertências, não identifica causa; bateria não é diagnosticada. |
+| Temperatura | Ford descreve advertência e parada segura para seu veículo. Manual correto e assistência prevalecem; sem abertura de sistema quente. |
+
+Termos descrevem funções, sem prescrever troca. Pressão do óleo não é apresentada como lembrete de troca. Sem frenagens de teste, manobras provocativas, celular ao dirigir, parada abrupta, entrada sob o carro, macaco, reparo elétrico/freios, partida auxiliar ou desmontagem. Não foram incorporados intervalos universais, publicidade nem recomendações de marca.
+
+Pendência: revisão profissional de mecânica de todo o texto novo e das definições. Testes estruturais/textuais não validam mecanicamente as associações; nenhuma revisão especializada é declarada.
+
+Na revisão geral de legibilidade de 25/10/2026, as sete etapas foram condensadas sem retirar os controles acima, as associações qualificadas ou a exigência de inspeção profissional.
+
+## Mobilidade e trânsito — revisão interna de 25/10/2026
+
+Escopo: somente a trilha 03.07. Não constitui formação de condutor, orientação jurídica, atendimento de emergência ou procedimento aplicável a toda via. O risco central é transformar orientação geral ou federal em regra local universal.
+
+Controles adotados: planejamento sem ranking de meios; consulta independente em canal oficial; ausência de taxas, pontos, calendários e prazos; prioridade à segurança e ao contato com autoridade competente; proibição de entrar ou permanecer em pista e de mover pessoa ferida por iniciativa própria; ausência de regra universal sobre movimentação de veículos; causa e culpa não presumidas. A fonte de acidentes é identificada como limitada a rodovias federais.
+
+Pendência: revisão por especialista em trânsito e direito. Regras locais e procedimentos de atendimento devem continuar nas fontes oficiais vigentes.
+
+## Alimentação e saneantes — revisão interna de 25/10/2026
+
+Escopo: somente a trilha 03.08. Não constitui prescrição nutricional, inspeção sanitária, diagnóstico médico ou orientação toxicológica individual. O risco central é uma regra geral ser interpretada como confirmação de que determinado alimento ou produto está seguro.
+
+Controles adotados: rótulo e conservação tratados em conjunto; nenhum tempo, temperatura ou validade universal; cheiro e aparência não comprovam segurança; não provar alimento suspeito; separação entre cru e pronto; saneante mantido na embalagem original; mistura e neutralização improvisada proibidas; sintomas ou exposição relevante encaminhados à saúde ou orientação toxicológica.
+
+Pendência: revisão por profissional de segurança dos alimentos e toxicologia. Testes de palavras não validam a segurança sanitária de situações concretas.

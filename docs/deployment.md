@@ -30,7 +30,7 @@ Antes de publicar qualquer alteração em HTML, CSS, JavaScript ou conteúdo:
 4. Execute `npm test` e a matriz manual afetada.
 5. Registre mudanças e limites da versão.
 
-O Service Worker usa o cache `cicero-v41`. Depois de armazenar shell, conteúdo, manifesto, preferências e ícones, `skipWaiting()` ativa a nova versão; durante `activate`, caches `cicero-*` anteriores são removidos. CSS, aplicação, preferências e JSON usam `?v=41` quando aplicável.
+O Service Worker usa o cache `cicero-v43`. Depois de armazenar shell, conteúdo, manifesto, preferências e ícones, `skipWaiting()` ativa a nova versão; durante `activate`, caches `cicero-*` anteriores são removidos. CSS, aplicação, preferências e JSON usam `?v=43` quando aplicável.
 
 ## Instalação PWA
 
@@ -40,7 +40,7 @@ Antes de considerar a instalação validada, confirme abertura pelo ícone, esco
 
 ## Verificação pós-publicação
 
-- Home, catálogo, sete eixos e 65 trilhas carregam por HTTPS.
+- Home, catálogo, sete eixos e 68 trilhas carregam por HTTPS quando a versão 4.2.0 for publicada.
 - Cada trilha aparece uma vez no catálogo completo e retorna ao eixo correto.
 - Progresso global e por eixo refletem a mesma chave local.
 - As tabelas tributárias exibem 11 tributos e 27 unidades da Federação com legenda, fonte, data e limites.
@@ -61,3 +61,7 @@ Antes de considerar a instalação validada, confirme abertura pelo ícone, esco
 O rollback consiste em republicar um commit anteriormente validado. Depois do rollback, incremente o nome do cache mesmo que os arquivos retornem a uma versão antiga; reutilizar um nome de cache pode manter recursos incompatíveis no navegador.
 
 Não reescreva histórico nem force push para executar rollback. Preserve a versão problemática para auditoria e corrija com um novo commit.
+
+## Preparação local 4.2.0
+
+Pacote `4.2.0`, cache `cicero-v43`, recursos `?v=43`. Esta entrega não faz commit, push ou publicação. Os registros anteriores de HTTPS referem-se ao lançamento público, não às trilhas novas. Conferir a atualização de v42 para v43 e a recarga offline conforme `testing.md` antes de uma futura publicação.

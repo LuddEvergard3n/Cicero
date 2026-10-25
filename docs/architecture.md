@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-O Cícero é uma aplicação web educacional estática para jovens brasileiros de 16 a 24 anos. A versão pública 4.0.0 organiza 65 trilhas em sete eixos, usa numeração visual hierárquica e oferece ajuda, preferências locais de acessibilidade, navegação adaptável e instalação PWA sem fornecer aconselhamento individual.
+O Cícero é uma aplicação web educacional estática para jovens brasileiros de 16 a 24 anos. A versão local 4.2.0 organiza 68 trilhas em sete eixos, usa numeração visual hierárquica e oferece ajuda, preferências locais de acessibilidade, navegação adaptável e instalação PWA sem fornecer aconselhamento individual.
 
 ## Decisões principais
 
@@ -49,7 +49,7 @@ tests/test-runner.js  Verificações estruturais e de lógica pura
 | Rota | Resultado |
 |---|---|
 | `#/` | Página inicial. |
-| `#/trilhas` | Catálogo das 65 trilhas agrupadas em sete eixos. |
+| `#/trilhas` | Catálogo das 68 trilhas agrupadas em sete eixos. |
 | `#/trilhas/:eixo` | Catálogo filtrado por um eixo editorial. |
 | `#/trilhas/:id` | Trilha identificada por ID estável; o renderizador distingue o ID de um eixo do ID de uma trilha. |
 | `#/glossario` | Lista completa de termos. |
@@ -80,3 +80,7 @@ Não há sincronização, autenticação, banco de dados, perfil, histórico rem
 - O eixo Brasil e Mundo usa exemplos históricos datados, mas não possui feed, mapa ou indicador corrente; atualizar um exemplo exige revisão editorial e das fontes.
 - O eixo Informação e Decisão usa somente exemplos editoriais estáticos e aritmética elementar; não recebe conteúdo, classifica fontes nem executa verificação externa.
 - As trilhas de educação, entrada profissional, assistência social e serviços essenciais usam regras gerais e canais oficiais; não verificam elegibilidade, validade individual, contratação, concessão, dívida ou tarifa.
+
+## Extensão 4.2.0
+
+`mecanica-basica-carro` permanece em 03.06. `mobilidade-transito-cotidiano` e `alimentacao-seguranca-casa` ocupam 03.07 e 03.08 em `moradia-servicos`. As duas trilhas reutilizam `Track`, cenário, checklist, busca e backlinks; não há módulo, rota, armazenamento ou componente novo. A contagem do catálogo continua derivada de `content.tracks.length`. IDs, chaves locais e posições anteriores permanecem intactos.

@@ -96,3 +96,44 @@ Todas as linhas possuem situação “revisão interna concluída” e revisão 
 - Não foram incorporados valores correntes, novos prazos ou novas regras temporárias.
 - A taxonomia de eixo é exclusiva para navegação; relações secundárias continuam no glossário.
 - A revisão por especialistas permanece obrigatória antes de qualquer alegação de auditoria substantiva ou conformidade completa.
+
+## Revisão parcial 4.1.0 — 25/10/2026
+
+A matriz histórica acima permanece referente à revisão de 18/10/2026. A nova entrega totaliza 66 trilhas, 314 termos e 172 fontes, sem alterar o conteúdo das 65 trilhas anteriores nem o campo geral reviewedAt.
+
+| Trilha | Eixo e posição | Sobreposição | Distinção | Sensibilidade temporal | Situação | Revisão especializada |
+|---|---|---|---|---|---|---|
+| mecanica-basica-carro | moradia-servicos, 03.06 | reparos-manutencao-casa; contratos-assinaturas; reclamacao-consumidor | Sistemas e sinais de carros; contratação reutiliza conceitos existentes | Manual por modelo, especificações e intervalos; sem valores universais | Revisão editorial interna, sete etapas, quadro de seis sinais, cenário e limites | Profissional de mecânica pendente |
+
+As cinco URLs abaixo foram reabertas em 25/10/2026; todas retornaram conteúdo legível no endereço indicado, sem substituição ou redirecionamento de destino reportado pelo navegador de pesquisa. A confirmação é de acessibilidade e aderência, não de independência comercial ou certificação técnica.
+
+| Fonte reaberta | Organização | Aderência e limite |
+|---|---|---|
+| [prf-orientacoes-veiculo](https://www.gov.br/prf/pt-br/seguranca-viaria/orientacoes-de-viagem) | Polícia Rodoviária Federal | Revisão e itens externos antes de viajar. |
+| [dnit-manutencao-veiculo](https://www.gov.br/dnit/pt-br/assuntos/noticias/manutencao-preventiva-gera-mais-seguranca-no-transito) | Departamento Nacional de Infraestrutura de Transportes | Manutenção conforme veículo e uso; não diagnostica ruídos de suspensão. |
+| [ford-manual-advertencias](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1841481&Uid=G1841480&buildtype=web&countryCode=BRA&div=f&languageCode=pt&userMarket=bra&vFilteringEnabled=False&variantid=6303) | Ford Motor Company (fabricante; interesse comercial) | Advertências de freio, óleo e temperatura; manual específico. |
+| [bosch-sinais-freios](https://am.boschcarservice.com/br/pt/nossos-servicos/sistema-de-freio/manutencao-dos-freios/) | Bosch Car Service (rede comercial de serviços) | Sinais de frenagem e inspeção; texto comercial não incorporado. |
+| [nakata-sinais-homocinetica](https://www.nakata.com.br/sala-de-imprensa/indicios-de-que-a-junta-homocinetica-pode-estar-comprometida) | Nakata (fabricante; interesse comercial) | Estalos em curvas e homocinética como possibilidade; sem generalizar periodicidade. |
+
+O mapeamento por linha e suas limitações estão em [auditoria de risco](risk-audit.md).
+
+## Revisão parcial 4.2.0 — 25/10/2026
+
+A matriz histórica e a revisão parcial 4.1.0 permanecem válidas. A nova entrega totaliza 68 trilhas, 324 termos e 180 fontes, sem alterar o conteúdo das 66 trilhas anteriores nem o campo geral `reviewedAt`.
+
+| Trilha | Eixo e posição | Sobreposição | Distinção | Sensibilidade temporal | Situação | Revisão especializada |
+|---|---|---|---|---|---|---|
+| mobilidade-transito-cotidiano | moradia-servicos, 03.07 | documentos-govbr; servicos-publicos-atendimento; mecanica-basica-carro; seguros-protecao | Planejamento, documentos, responsabilidade institucional e resposta inicial a ocorrência; não ensina direção, seguro ou mecânica | Serviços, documentos, competências e procedimentos locais; sem taxas, pontos ou calendários | Revisão editorial interna, seis etapas, cenário, checklist e limites | Especialista em trânsito e revisão jurídica pendentes |
+| alimentacao-seguranca-casa | moradia-servicos, 03.08 | orcamento; compra-consciente; saude-sus; reparos-manutencao-casa | Compra, rótulo, conservação, contaminação cruzada e saneantes; não prescreve dieta, receita ou tratamento | Regras sanitárias, rótulos e orientação sobre saneantes; sem tempo ou temperatura universal | Revisão editorial interna, sete etapas, cenário, checklist e limites | Profissional de segurança dos alimentos e toxicologia pendente |
+
+As oito referências novas foram reabertas em 25/10/2026 nos endereços oficiais. As páginas da Lei de Mobilidade Urbana, Serviços de Trânsito, Código de Trânsito, acidentes em rodovias federais, Guias Alimentares, Boas Práticas da Anvisa, rotulagem e mistura de saneantes estavam acessíveis. A cartilha de boas práticas redirecionou para o arquivo PDF oficial equivalente no mesmo host. Nenhuma fonte foi substituída e nenhum host foi acrescentado à lista permitida.
+
+Esta revisão confirma aderência ao recorte e disponibilidade na data indicada. Não constitui auditoria especializada, confirmação de regra local nem revisão integral das 180 fontes.
+
+## Revisão geral de legibilidade — 25/10/2026
+
+As 68 trilhas foram verificadas quanto a títulos, perguntas, objetivos, extensão das etapas, cenários, alternativas, checklists e repetição literal. Não foram encontrados títulos, perguntas, cenários, alternativas ou itens de checklist duplicados, nem perguntas sem interrogação final. As 66 trilhas que já respeitavam o padrão foram preservadas. Mecânica foi condensada por ser o único desvio amplo de extensão; uma etapa de mobilidade recebeu ajuste equivalente. Todos os blocos de etapa passaram a ter no máximo 500 caracteres, sem remover encaminhamentos ou limites de segurança.
+
+As 180 referências foram testadas novamente. Cento e quarenta e nove responderam diretamente; 31 recusaram o cliente automatizado por negociação TLS, proteção antirrobô, exigência de JavaScript ou método HTTP. As páginas críticas do Planalto, Câmara dos Deputados, Portal da Transparência e Portal Consular foram confirmadas pelo navegador de pesquisa. Nenhuma URL foi substituída.
+
+O campo geral `reviewedAt` passou para `2026-10-25`. Essa data representa revisão editorial e técnica do catálogo, não certificação por especialistas das áreas tratadas.

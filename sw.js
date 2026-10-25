@@ -1,5 +1,5 @@
-const CACHE = "cicero-v41";
-const ASSETS = ["./", "./index.html", "./manifest.json", "./css/styles.css?v=41", "./data/content.json?v=41", "./js/app.js?v=41", "./js/preferences.js?v=41", "./js/preferences-bootstrap.js?v=41", "./js/router.js", "./js/search.js", "./js/storage.js", "./icons/favicon.svg", "./icons/apple-touch-icon.png", "./icons/icon-192.png", "./icons/icon-512.png", "./icons/icon-maskable-512.png"];
+const CACHE = "cicero-v43";
+const ASSETS = ["./", "./index.html", "./manifest.json", "./css/styles.css?v=43", "./data/content.json?v=43", "./js/app.js?v=43", "./js/preferences.js?v=43", "./js/preferences-bootstrap.js?v=43", "./js/router.js", "./js/search.js", "./js/storage.js", "./icons/favicon.svg", "./icons/apple-touch-icon.png", "./icons/icon-192.png", "./icons/icon-512.png", "./icons/icon-maskable-512.png"];
 
 /** Stores the shell and activates it without leaving stale versioned caches behind. */
 self.addEventListener("install", (event) => event.waitUntil(

@@ -30,7 +30,7 @@ O objetivo da V1 é atender aos requisitos essenciais da WCAG 2.2 nível AA nos 
 - A rota Ajuda descreve teclado, toque, instalação, dados locais e limites mesmo quando o conteúdo editorial falha.
 - Layout reorganizado para uma coluna abaixo de 720 pixels.
 - Texto e controles não dependem somente de cor para comunicar estado.
-- As 65 trilhas reutilizam os mesmos títulos, listas, botões nativos, checklist e relações de glossário já cobertos pelos fluxos acessíveis existentes.
+- As 68 trilhas reutilizam os mesmos títulos, listas, botões nativos, checklist e relações de glossário já cobertos pelos fluxos acessíveis existentes.
 - Os sete eixos são apresentados como regiões e cartões com títulos, resumos, links e contagem textual; a classificação não depende de cor.
 - Tabelas editoriais usam `caption`, cabeçalhos de coluna com `scope="col"`, cabeçalhos de linha com `scope="row"` e uma região rolável nomeada acessível por teclado.
 - Conteúdo de saúde e proteção urgente permanece textual: não há acionamento automático, coleta de relato ou controle que sugira atendimento em tempo real.
@@ -70,3 +70,7 @@ Depois de cada mudança de rota, o foco é movido para o elemento `main`, permit
 - VoiceOver, TalkBack e ChromeVox dependem de aparelhos e testes humanos ainda não disponíveis.
 
 Essas lacunas devem ser tratadas antes de declarar conformidade formal. A versão 4.0.0 não declara auditoria WCAG independente.
+
+## Escopo 4.2.0
+
+As trilhas de mobilidade e alimentação reutilizam títulos, listas, botões, checklist, retornos de cenário e anúncios existentes; não introduzem tabela ou interação nova. Não foi executado leitor de tela, conforme solicitação. Resultados específicos de teclado, dimensões e preferências estão em `testing.md`; não há nova declaração de conformidade.

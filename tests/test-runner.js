@@ -23,8 +23,9 @@ const required = [
 ];
 const trackIds = new Set(), axisIds = new Set(), termIds = new Set(content.terms.map((item) => item.id)), sourceIds = new Set(content.sources.map((item) => item.id));
 for (const file of required) assert.ok(existsSync(new URL(file, root)), `Arquivo obrigatório ausente: ${file}`);
-assert.equal(packageJson.version, "4.0.0", "Versão do pacote deve acompanhar a entrega técnica");
-assert.equal(content.reviewedAt, "2026-10-18", "Entrega técnica não deve alterar a data da revisão editorial");
+assert.equal(packageJson.version, "4.2.0", "Versão do pacote deve acompanhar a entrega técnica");
+assert.equal(content.reviewedAt, "2026-10-25", "A revisão editorial geral deve acompanhar a preparação da publicação");
+assert.match(indexHtml, /Conteúdo geral revisado em 25 de outubro de 2026\./, "O rodapé deve mostrar a data geral de revisão");
 assert.equal(manifest.id, "./");
 assert.equal(manifest.scope, "./");
 assert.equal(manifest.lang, "pt-BR");
@@ -38,11 +39,15 @@ for (const icon of manifest.icons) {
   const [width, height] = [png.readUInt32BE(16), png.readUInt32BE(20)];
   assert.equal(`${width}x${height}`, icon.sizes, `Dimensão incorreta: ${icon.src}`);
 }
-assert.equal(content.axes.length, 7, "A versão 3.11 deve conter sete eixos"); assert.equal(content.tracks.length, 65, "A versão 3.11 deve conter 65 trilhas"); assert.equal(content.terms.length, 306, "A versão 3.11 deve conter 306 termos"); assert.equal(content.sources.length, 167, "A versão 3.11 deve conter 167 fontes"); assert.equal(termIds.size, content.terms.length, "IDs de termos devem ser únicos"); assert.equal(sourceIds.size, content.sources.length, "IDs de fontes devem ser únicos");
+assert.equal(content.axes.length, 7, "A versão 4.2 deve conter sete eixos"); assert.equal(content.tracks.length, 68, "A versão 4.2 deve conter 68 trilhas"); assert.equal(content.terms.length, 324, "A versão 4.2 deve conter 324 termos"); assert.equal(content.sources.length, 180, "A versão 4.2 deve conter 180 fontes"); assert.equal(termIds.size, content.terms.length, "IDs de termos devem ser únicos"); assert.equal(sourceIds.size, content.sources.length, "IDs de fontes devem ser únicos");
 const tableIds = new Set();
 for (const track of content.tracks) {
   assert.ok(!trackIds.has(track.id), `ID repetido: ${track.id}`); trackIds.add(track.id);
   assert.ok(track.title && track.question && track.steps.length >= 3 && track.checklist.length >= 3, `Trilha incompleta: ${track.id}`);
+  assert.match(track.question.trim(), /\?$/, `Pergunta sem interrogação final: ${track.id}`);
+  assert.ok(track.steps.every((step) => step.body.length <= 500), `Etapa longa demais para leitura: ${track.id}`);
+  assert.equal(new Set(track.checklist).size, track.checklist.length, `Checklist repetido: ${track.id}`);
+  assert.equal(new Set(track.scenario.options).size, track.scenario.options.length, `Alternativa repetida: ${track.id}`);
   assert.ok(track.scenario.options.length >= 3 && Number.isInteger(track.scenario.correct) && track.scenario.correct >= 0 && track.scenario.correct < track.scenario.options.length, `Cenário inválido: ${track.id}`);
   for (const id of track.terms) assert.ok(termIds.has(id), `Termo ausente: ${id}`);
   for (const id of track.sources) assert.ok(sourceIds.has(id), `Fonte ausente: ${id}`);
@@ -69,13 +74,50 @@ for (const id of trackIds) assert.ok(assignedTracks.includes(id), `Trilha sem ei
 const expectedAxisOrder = {
   "dinheiro-consumo": ["primeiro-salario", "contracheque", "orcamento", "reserva-emergencia", "metas-planejamento-financeiro", "banco-pix", "credito", "juros-selic", "dividas-renegociacao", "financiamento-consorcio", "compra-consciente", "contratos-assinaturas", "seguros-protecao", "previdencia-futuro", "investimentos-basicos", "impostos-cotidiano", "inflacao-poder-compra", "cambio"],
   "trabalho-educacao": ["escolha-curso-instituicao", "matricula-bolsas-financiamento-estudantil", "processos-seletivos-transicao-profissional", "entrada-trabalho", "direitos-no-trabalho", "renda-autonoma-mei", "atividade-economica-trabalho"],
-  "moradia-servicos": ["aluguel-moradia", "servicos-essenciais-moradia", "reparos-manutencao-casa", "servicos-publicos-atendimento", "reclamacao-consumidor"],
+  "moradia-servicos": ["aluguel-moradia", "servicos-essenciais-moradia", "reparos-manutencao-casa", "servicos-publicos-atendimento", "reclamacao-consumidor", "mecanica-basica-carro", "mobilidade-transito-cotidiano", "alimentacao-seguranca-casa"],
   "direitos-saude-protecao": ["documentos-govbr", "direitos-digitais", "cuidados-basicos-internet", "golpes-resposta", "saude-sus", "planos-saude", "assistencia-social-beneficios", "ajuda-resolucao-conflitos", "protecao-emergencia-denuncia"],
   "estado-politica": ["constituicao-federal", "federacao-competencias", "poderes-processo-legislativo", "justica-controle-instituicoes", "eleicoes-representacao", "orcamento-publico", "politicas-economicas", "politicas-publicas", "participacao-transparencia-fiscalizacao"],
   "brasil-mundo": ["comercio-cadeias-globais", "energia-recursos-estrategicos", "moedas-sistema-internacional", "blocos-organizacoes-internacionais", "migracao-refugio-deslocamento", "clima-cooperacao-internacional", "tecnologia-poder-internacional", "sancoes-economicas", "brasil-relacoes-internacionais"],
   "informacao-decisao": ["evidencia-qualidade-fontes", "estatistica-cotidiano", "graficos-pesquisas", "correlacao-causalidade-incerteza", "argumentos-falacias-vieses", "propaganda-persuasao", "desinformacao-verificacao", "decisao-informacao-incompleta"]
 };
 for (const axis of content.axes) assert.deepEqual(axis.tracks, expectedAxisOrder[axis.id], `Ordem pedagógica incorreta: ${axis.id}`);
+const car = content.tracks.find((track) => track.id === "mecanica-basica-carro");
+assert.equal(content.axes[2].tracks[5], car.id, "Mecânica deve ocupar 03.06 sem deslocar as trilhas anteriores");
+assert.equal(car.steps.length, 7);
+assert.equal(car.checklist.length, 6);
+assert.equal(car.scenario.correct, 2);
+assert.equal(car.tables.length, 1);
+assert.equal(car.tables[0].id, "sinais-carro-contexto");
+assert.equal(car.tables[0].rows.length, 6);
+assert.equal(car.tables[0].headers.length, 4);
+for (const [query, id] of [["mecanica", car.id], ["pastilha de freio", "pastilha-de-freio"], ["junta homocinetica", "junta-homocinetica"], ["arrefecimento", "sistema-de-arrefecimento"], ["bateria automotiva", "bateria-automotiva"], ["sistema de partida", "sistema-de-partida"]]) {
+  assert.ok(searchContent(content, query).some((item) => item.id === id), `Busca mecânica ausente: ${query}`);
+}
+for (const id of car.terms.slice(0, 8)) {
+  const term = content.terms.find((item) => item.id === id);
+  assert.equal(searchContent(content, term.name)[0].id, id, `Título exato deve priorizar o termo: ${id}`);
+}
+assert.ok(searchContent(content, "estalos em curvas").some((item) => item.id === car.id), "Quadro de sinais deve ser indexado");
+assert.match(app, /As \$\{content\.tracks\.length\} trilhas/, "Catálogo deve calcular a contagem");
+// These checks protect editorial boundaries; they do not validate mechanical accuracy.
+const carText = JSON.stringify(car);
+for (const limit of ["parada segura", "não identificam", "não determinam se é seguro seguir viagem", "Não abra o arrefecimento quente", "uso de macaco", "entrada sob o carro", "interesse comercial"]) assert.ok(carText.includes(limit), `Limite editorial ausente: ${limit}`);
+for (const [id, host] of [["ford-manual-advertencias", "www.fordservicecontent.com"], ["bosch-sinais-freios", "am.boschcarservice.com"], ["nakata-sinais-homocinetica", "www.nakata.com.br"]]) assert.equal(new URL(content.sources.find((source) => source.id === id).url).hostname, host);
+const mobility = content.tracks.find((track) => track.id === "mobilidade-transito-cotidiano");
+const foodSafety = content.tracks.find((track) => track.id === "alimentacao-seguranca-casa");
+assert.equal(content.axes[2].tracks[6], mobility.id, "Mobilidade deve ocupar 03.07");
+assert.equal(content.axes[2].tracks[7], foodSafety.id, "Alimentação deve ocupar 03.08");
+assert.equal(mobility.steps.length, 6);
+assert.equal(foodSafety.steps.length, 7);
+assert.equal(mobility.scenario.correct, 2);
+assert.equal(foodSafety.scenario.correct, 2);
+for (const [query, id] of [["mobilidade urbana", "mobilidade-urbana"], ["CNH", "cnh"], ["CRLV", "crlv"], ["recall veicular", "recall-veicular"], ["sinistro transito", "sinistro-de-transito"], ["planejamento alimentar", "planejamento-alimentar"], ["rotulagem alimentos", "rotulagem-de-alimentos"], ["data validade", "data-de-validade"], ["contaminacao cruzada", "contaminacao-cruzada"], ["saneante", "saneante"]]) assert.equal(searchContent(content, query)[0]?.id, id, `Busca deve priorizar ${id}`);
+const mobilityText = JSON.stringify(mobility).normalize("NFD").replace(/\p{Diacritic}/gu, "").toLowerCase();
+for (const limit of ["rodovias federais", "nao mova pessoa ferida", "nem aplique regra universal", "nao determina causa, culpa, responsabilidade"]) assert.ok(mobilityText.includes(limit), `Limite de mobilidade ausente: ${limit}`);
+for (const transientPattern of [/valor da taxa/, /\b\d+ pontos\b/, /licenciamento vence/, /prazo de \d+ dias/]) assert.doesNotMatch(mobilityText, transientPattern, `Regra temporária de trânsito não deve ser incorporada: ${transientPattern}`);
+const foodSafetyText = JSON.stringify(foodSafety).normalize("NFD").replace(/\p{Diacritic}/gu, "").toLowerCase();
+for (const limit of ["nao prove o alimento", "nao misture produtos", "nao tente neutralizar", "nao diagnostica intoxicacao", "nao publica tempo ou temperatura universal"]) assert.ok(foodSafetyText.includes(limit), `Limite de alimentação ausente: ${limit}`);
+assert.doesNotMatch(foodSafetyText, /dieta personalizada|cardapio recomendado|misture agua sanitaria|adicione outro produto para neutralizar/, "Trilha alimentar não deve prescrever dieta nem mistura química");
 assert.ok(searchContent(content,"CET").some((item) => item.id === "cet"), "Busca deve encontrar CET"); assert.ok(searchContent(content,"Pix").some((item) => item.id === "banco-pix"), "Busca deve encontrar trilha Pix"); assert.ok(searchContent(content,"renegociação").some((item) => item.id === "dividas-renegociacao"), "Busca deve encontrar a trilha de renegociação"); assert.ok(searchContent(content,"saldo devedor").some((item) => item.id === "saldo-devedor"), "Busca deve encontrar saldo devedor"); assert.ok(searchContent(content,"aluguel").some((item) => item.id === "aluguel-moradia"), "Busca deve encontrar a trilha de aluguel"); assert.ok(searchContent(content,"vistoria").some((item) => item.id === "vistoria"), "Busca deve encontrar o termo vistoria");
 assert.equal(searchContent(content, "caucao")[0]?.id, "caucao", "Busca deve ignorar acentos e priorizar título exato");
 assert.equal(searchContent(content, "locacao")[0]?.id, "locacao", "Busca deve encontrar locação sem acento");
@@ -119,7 +161,7 @@ assert.equal(searchContent(content, "acesso informacao")[0]?.id, "acesso-a-infor
 assert.ok(searchContent(content, "aliquota ICMS").some((item) => item.id === "impostos-cotidiano"), "Busca deve indexar tabelas editoriais");
 assert.deepEqual(searchContent(content, ""), [], "Busca vazia não deve retornar conteúdo");
 assert.deepEqual(searchContent(content, "conteudo-inexistente"), [], "Busca sem correspondência deve retornar vazio");
-const institutionalHosts = new Set(["www.cnj.jus.br", "www.camara.leg.br", "www2.camara.leg.br", "www25.senado.leg.br", "www.tse.jus.br", "comsefaz.org.br", "www.wto.org", "www.imf.org", "www.iea.org", "www.un.org", "main.un.org", "unfccc.int", "help.unhcr.org", "openstax.org", "www.unesco.org", "unesdoc.unesco.org", "iris.who.int", "cdn.who.int", "www.cdc.gov", "www.oecd.org", "www.nist.gov", "airc.nist.gov", "cartilha.cert.br"]);
+const institutionalHosts = new Set(["www.cnj.jus.br", "www.camara.leg.br", "www2.camara.leg.br", "www25.senado.leg.br", "www.tse.jus.br", "comsefaz.org.br", "www.wto.org", "www.imf.org", "www.iea.org", "www.un.org", "main.un.org", "unfccc.int", "help.unhcr.org", "openstax.org", "www.unesco.org", "unesdoc.unesco.org", "iris.who.int", "cdn.who.int", "www.cdc.gov", "www.oecd.org", "www.nist.gov", "airc.nist.gov", "cartilha.cert.br", "www.fordservicecontent.com", "am.boschcarservice.com", "www.nakata.com.br"]);
 for (const source of content.sources) { const url = new URL(source.url); assert.equal(url.protocol, "https:", `Fonte sem HTTPS: ${source.id}`); assert.ok(url.hostname === "gov.br" || url.hostname.endsWith(".gov.br") || institutionalHosts.has(url.hostname), `Domínio não aprovado: ${source.id}`); }
 const store = new Map(), storage = { getItem: (key) => store.get(key) || null, setItem: (key,value) => store.set(key,value), removeItem: (key) => store.delete(key) };
 saveProgress(new Set(["credito"]), storage);
@@ -160,7 +202,7 @@ const practicalGapText = JSON.stringify(content.tracks.filter((track) => practic
 for (const phrase of ["emprego garantido pela instituicao", "bolsa garantida", "beneficio garantido", "cadastro unico concede automaticamente", "determinamos sua elegibilidade"]) assert.ok(!practicalGapText.includes(phrase), `Promessa ou conclusão individual proibida: ${phrase}`);
 for (const transientPattern of [/salario minimo/, /nota de corte/, /inscricoes? (abrem|encerram)/, /\b\d+(?:[,.]\d+)?%\b/]) assert.doesNotMatch(practicalGapText, transientPattern, `Regra temporária não deve ser incorporada: ${transientPattern}`);
 const addedPracticalTracks = ["reparos-manutencao-casa", "cuidados-basicos-internet"];
-for (const id of addedPracticalTracks) assert.ok(trackIds.has(id), `Trilha da versão 3.11 ausente: ${id}`);
+for (const id of addedPracticalTracks) assert.ok(trackIds.has(id), `Trilha da versão 4.1 ausente: ${id}`);
 for (const [query, id] of [["manutencao preventiva", "manutencao-preventiva"], ["reparo domestico", "reparo-domestico"], ["risco eletrico", "risco-eletrico"], ["orcamento servico", "orcamento-de-servico"], ["gerenciador senhas", "gerenciador-de-senhas"], ["backup", "backup"], ["atualizacao seguranca", "atualizacao-de-seguranca"], ["recuperacao conta", "recuperacao-de-conta"], ["permissao aplicativo", "permissao-de-aplicativo"]]) assert.equal(searchContent(content, query)[0]?.id, id, `Busca deve priorizar ${id}`);
 const repairTrack = content.tracks.find((track) => track.id === "reparos-manutencao-casa");
 const internetCareTrack = content.tracks.find((track) => track.id === "cuidados-basicos-internet");
@@ -203,7 +245,7 @@ assert.match(indexHtml, /<dialog id="acessibilidade"[^>]*aria-labelledby="titulo
 assert.match(indexHtml, /id="alternar-menu"[^>]*aria-expanded="false"[^>]*aria-controls="controles-cabecalho"/, "Menu responsivo deve expor estado e relação");
 assert.match(indexHtml, /id="alternar-busca"[^>]*aria-expanded="false"[^>]*aria-controls="busca"/, "Busca deve expor estado e relação");
 assert.match(indexHtml, /id="abrir-acessibilidade"[^>]*aria-haspopup="dialog"/, "Acessibilidade deve anunciar o diálogo");
-assert.ok(indexHtml.indexOf("preferences-bootstrap.js?v=41") < indexHtml.indexOf("styles.css?v=41"), "Preferências devem ser aplicadas antes do CSS");
+assert.ok(indexHtml.indexOf("preferences-bootstrap.js?v=43") < indexHtml.indexOf("styles.css?v=43"), "Preferências devem ser aplicadas antes do CSS");
 assert.match(app, /accessibilityTrigger = event\?\.currentTarget/, "Diálogo deve guardar o acionador que receberá o foco ao fechar");
 assert.match(app, /function tracks\(axisId = null\)/, "Catálogo deve aceitar uma rota de eixo");
 assert.match(app, /content\.tracks\.some\(\(item\) => item\.id === route\.id\)/, "Rota deve distinguir trilha de eixo");
@@ -222,13 +264,13 @@ assert.match(styles, /html\[data-theme="dark"\]/, "Tema escuro deve possuir toke
 assert.match(styles, /html\[data-contrast="high"\]/, "Alto contraste deve possuir tokens próprios");
 assert.match(styles, /html\[data-text-scale="150"\]/, "Texto deve aceitar ampliação local até 150%");
 assert.match(styles, /min-height:\s*2\.75rem/, "Controles principais devem possuir alvo mínimo de 44 pixels");
-assert.match(serviceWorker, /cicero-v41/, "Service Worker deve usar o cache da versão 4.0.0");
-for (const source of [indexHtml, app, serviceWorker]) assert.doesNotMatch(source, /\?v=(?:[1-9]|[1-3]\d|40)(?!\d)/, "Recursos versionados devem usar somente ?v=41");
+assert.match(serviceWorker, /cicero-v43/, "Service Worker deve usar o cache da versão 4.2.0");
+for (const source of [indexHtml, app, preferenceBootstrap, serviceWorker]) for (const match of source.matchAll(/\?v=(\d+)/g)) assert.equal(match[1], "43", "Todos os recursos versionados devem usar ?v=43");
 assert.match(preferenceBootstrap, /cicero-accessibility-v1/, "Bootstrap deve aplicar preferências locais antes da pintura");
 function luminance(hex) { const channels = hex.match(/.{2}/g).map((part) => parseInt(part, 16) / 255).map((value) => value <= 0.04045 ? value / 12.92 : ((value + 0.055) / 1.055) ** 2.4); return 0.2126 * channels[0] + 0.7152 * channels[1] + 0.0722 * channels[2]; }
 function contrast(first, second) { const a = luminance(first), b = luminance(second); return (Math.max(a, b) + 0.05) / (Math.min(a, b) + 0.05); }
 for (const track of content.tracks) { const theme = styles.match(new RegExp(`\\[data-track="${track.id}"\\] \\{ --track: #([0-9a-f]{6})`)); assert.ok(theme, `Tema visual ausente: ${track.id}`); assert.ok(contrast(theme[1], "fffdf7") >= 4.5, `Tema sem contraste AA: ${track.id}`); }
-assert.match(serviceWorker, /cicero-v41/, "O cache deve usar a versão técnica atual");
+assert.match(serviceWorker, /cicero-v43/, "O cache deve usar a versão técnica atual");
 assert.match(serviceWorker, /self\.skipWaiting\(\)/, "A atualização deve ativar o novo cache sem aguardar o fechamento das abas");
 assert.match(serviceWorker, /caches\.delete/, "Caches antigos devem ser removidos");
 const cacheVersion = serviceWorker.match(/cicero-v(\d+)/)?.[1];

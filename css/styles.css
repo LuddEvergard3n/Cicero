@@ -777,3 +777,7 @@ html[data-motion="reduced"] *::after { animation-duration: .01ms !important; ani
   .options button.is-selected { outline: 3px solid Highlight; }
   .table-scroll { border: 2px solid CanvasText; }
 }
+
+[data-track="mecanica-basica-carro"] { --track: #705331; --track-soft: #ede1d1; }
+[data-track="mobilidade-transito-cotidiano"] { --track: #3d5f70; --track-soft: #dbe7ed; }
+[data-track="alimentacao-seguranca-casa"] { --track: #3e6548; --track-soft: #dbe9dd; }
