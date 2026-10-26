@@ -46,7 +46,7 @@ Informação e decisão foi concluído na versão 3.5.0 com evidência, fontes, 
 
 Os gaps prioritários de vida prática foram ampliados na versão 3.11.0 com manutenção doméstica segura e cuidados preventivos na internet. Reparos domésticos deixaram de ser uma exclusão ampla, mas intervenções técnicas ou perigosas, diagnóstico, catálogo de ferramentas e indicação de profissionais continuam fora do escopo. Vestibulares, vida acadêmica, carreira avançada, catálogo de benefícios e cálculos tarifários também permanecem fora.
 
-Mobilidade cotidiana e rotina alimentar foram cobertas na versão local 4.2.0. A primeira explica planejamento, documentos, competências e resposta segura a ocorrências sem ensinar direção ou atribuir culpa. A segunda cobre compra, rótulo, conservação, contaminação cruzada e saneantes sem prescrever dieta, diagnosticar ou fornecer receitas. Permanecem pendentes revisões especializadas em trânsito e segurança dos alimentos.
+Mobilidade cotidiana e rotina alimentar foram cobertas e publicadas na versão 4.2.0. A primeira explica planejamento, documentos, competências e resposta segura a ocorrências sem ensinar direção ou atribuir culpa. A segunda cobre compra, rótulo, conservação, contaminação cruzada e saneantes sem prescrever dieta, diagnosticar ou fornecer receitas. Permanecem pendentes revisões especializadas em trânsito e segurança dos alimentos.
 
 ## Tema excluído do Cícero
 
@@ -62,10 +62,10 @@ Defesa, conflitos e paz não será incorporado ao Cícero. Estratégia, operaç�
 - orientação jurídica ou financeira individual;
 - backend e banco de dados.
 
-## Mecânica básica — 4.1.0 local
+## Mecânica básica — incorporada à publicação 4.2.0
 
-Cobertos sistemas, sinais contextualizados, manutenção e contratação de oficina em 03.06. Permanecem fora do escopo diagnóstico, reparos, motos, GNV e tração híbrida/elétrica. Pendente revisão por profissional de mecânica; publicação desta versão não solicitada. Nenhuma pendência de auditoria especializada anterior é encerrada por esta entrega.
+Cobertos sistemas, sinais contextualizados, manutenção e contratação de oficina em 03.06. Permanecem fora do escopo diagnóstico, reparos, motos, GNV e tração híbrida/elétrica. A revisão por profissional de mecânica continua pendente e nenhuma pendência de auditoria especializada anterior é encerrada por esta publicação.
 
-## Fechamento do catálogo — 4.2.0 local
+## Fechamento do catálogo — 4.2.0 publicada
 
-As trilhas 03.07 e 03.08 encerram as expansões gerais aprovadas. Limpeza pesada, lavanderia, controle de pragas, tutoriais de direção, primeiros socorros e alimentação clínica permanecem fora. A partir deste marco, o trabalho editorial se concentra em revisão especializada, correções e atualização de referências. Commit, push e publicação não foram solicitados.
+As trilhas 03.07 e 03.08 encerram as expansões gerais aprovadas. Limpeza pesada, lavanderia, controle de pragas, tutoriais de direção, primeiros socorros e alimentação clínica permanecem fora. A partir deste marco publicado, o trabalho editorial se concentra em revisão especializada, correções e atualização de referências.

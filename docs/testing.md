@@ -489,7 +489,7 @@ Executada em 18 de outubro de 2026:
 - commit, push, GitHub Pages e validação pública, que não foram solicitados;
 - dispositivos físicos de 320/768/1280 px: as larguras foram emuladas no navegador local.
 
-## Validação local 4.2.0 — 25/10/2026
+## Validação e publicação 4.2.0 — 25/10/2026
 
 ### Automatizado
 
@@ -519,11 +519,22 @@ Executada em 18 de outubro de 2026:
 - o Service Worker controlou a página e o armazenamento apresentou somente `cicero-v43`; uma recarga posterior com a rede desativada reabriu a trilha de alimentação sem erro;
 - console sem avisos ou erros nas duas trilhas e na visita offline.
 
+### GitHub Pages
+
+- commit funcional `bef6cd54a82d1ad4cc9c5af211aebc1aed7176c2` enviado para `main`;
+- build `40217366588` do GitHub Pages: concluído com sucesso para o mesmo commit;
+- página inicial, `index.html`, `data/content.json?v=43`, `sw.js` e `manifest.json`: HTTP `200` por HTTPS;
+- JSON público: sete eixos, 68 trilhas, 324 termos, 180 fontes e revisão geral em `2026-10-25`;
+- HTML público: aplicação `?v=43` e data geral de revisão de 25/10/2026;
+- Service Worker público: `cicero-v43` e recursos `?v=43`;
+- rotas públicas de mecânica, mobilidade e alimentação abriram com os títulos esperados; a alternativa adequada de mobilidade respondeu ao clique;
+- console sem erros ou avisos nas rotas públicas verificadas.
+
 ### Não executado
 
 - leitor de tela, conforme solicitação;
 - zoom real de 400%: a ferramenta programática foi limitada pelo navegador a 300%; o reflow em 320 pixels foi aprovado, mas não substitui o teste real;
 - transição observada desde um cache comprovadamente presente `cicero-v42`: após a atualização, somente `cicero-v43` foi encontrado;
-- dispositivos físicos, revisão especializada em trânsito ou segurança dos alimentos, commit, push e GitHub Pages.
+- dispositivos físicos e revisão especializada em mecânica, trânsito ou segurança dos alimentos.
 
 Não executados: NVDA e qualquer outro leitor de tela, retirados do aceite por solicitação do usuário; zoom real pela interface do navegador; dispositivo físico, toque físico, caneta, Safari, Firefox e Edge externos; abertura pelo ícone instalado; auditoria WCAG independente. O comando de diagnóstico de instalabilidade do navegador não retornou resultado, portanto manifesto válido, Service Worker e offline não são descritos como confirmação do prompt de instalação em todos os navegadores.

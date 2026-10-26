@@ -1,12 +1,12 @@
 # Histórico de versões
 
-## 4.2.0 — Mobilidade e rotina alimentar (local, 25/10/2026)
+## 4.2.0 — Mobilidade e rotina alimentar (publicada em 25/10/2026)
 
 - Adicionou 03.07 e 03.08 com treze etapas, dois cenários e dois checklists.
 - Acrescentou dez termos e oito referências oficiais: 68 trilhas, 324 termos e 180 fontes.
 - Preservou posições, IDs e chaves locais; as 68 trilhas receberam revisão estrutural de legibilidade em 25/10/2026.
 - Reutilizou renderizador, temas e contratos atuais; sem componente, tabela, host ou dependência nova.
-- Cache `cicero-v43`, recursos `?v=43`; sem commit, push ou publicação.
+- Cache `cicero-v43` e recursos `?v=43`; publicação inicial pelo commit `bef6cd54a82d1ad4cc9c5af211aebc1aed7176c2`, validada no GitHub Pages.
 - As 180 referências foram verificadas novamente; revisões especializadas em trânsito e segurança dos alimentos permanecem pendentes.
 
 ## 4.1.0 — Mecânica básica (local, 25/10/2026)

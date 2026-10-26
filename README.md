@@ -1,6 +1,6 @@
 # Cicero
 
-Cicero is a static educational platform that introduces practical adult-life decisions to Brazilians aged 16 to 24. Local version 4.2.0 organizes 68 learning paths into seven areas and provides search, local progress tracking, accessibility preferences, responsive navigation, and PWA installation.
+Cicero is a static educational platform that introduces practical adult-life decisions to Brazilians aged 16 to 24. Version 4.2.0 organizes 68 learning paths into seven areas and provides search, local progress tracking, accessibility preferences, responsive navigation, and PWA installation.
 
 The content offers general education, not individualized financial, legal, medical, political, or professional advice.
 

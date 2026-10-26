@@ -40,7 +40,7 @@ Antes de considerar a instalação validada, confirme abertura pelo ícone, esco
 
 ## Verificação pós-publicação
 
-- Home, catálogo, sete eixos e 68 trilhas carregam por HTTPS quando a versão 4.2.0 for publicada.
+- Home, catálogo, sete eixos e 68 trilhas carregam por HTTPS na versão 4.2.0 publicada.
 - Cada trilha aparece uma vez no catálogo completo e retorna ao eixo correto.
 - Progresso global e por eixo refletem a mesma chave local.
 - As tabelas tributárias exibem 11 tributos e 27 unidades da Federação com legenda, fonte, data e limites.
@@ -62,6 +62,6 @@ O rollback consiste em republicar um commit anteriormente validado. Depois do ro
 
 Não reescreva histórico nem force push para executar rollback. Preserve a versão problemática para auditoria e corrija com um novo commit.
 
-## Preparação local 4.2.0
+## Publicação 4.2.0
 
-Pacote `4.2.0`, cache `cicero-v43`, recursos `?v=43`. Esta entrega não faz commit, push ou publicação. Os registros anteriores de HTTPS referem-se ao lançamento público, não às trilhas novas. Conferir a atualização de v42 para v43 e a recarga offline conforme `testing.md` antes de uma futura publicação.
+Pacote `4.2.0`, cache `cicero-v43` e recursos `?v=43` foram publicados em 25/10/2026 pelo commit `bef6cd54a82d1ad4cc9c5af211aebc1aed7176c2`. O build `40217366588` do GitHub Pages terminou com sucesso; HTML, JSON, manifesto e Service Worker responderam `200` por HTTPS. A validação detalhada e seus limites estão em `testing.md`.

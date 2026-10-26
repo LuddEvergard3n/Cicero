@@ -47,7 +47,7 @@ Não existem fontes remotas, pixels, scripts de terceiros, cookies próprios, SD
 
 ## Service Worker
 
-O Service Worker usa estratégia cache-first para arquivos essenciais. A versão local 4.2.0 usa `cicero-v43` e inclui manifesto, módulos de preferências e ícones locais. Toda alteração de arquivo armazenado deve incrementar `CACHE` e ser validada com atualização e recarregamento offline.
+O Service Worker usa estratégia cache-first para arquivos essenciais. A versão publicada 4.2.0 usa `cicero-v43` e inclui manifesto, módulos de preferências e ícones locais. Toda alteração de arquivo armazenado deve incrementar `CACHE` e ser validada com atualização e recarregamento offline.
 
 O cache não contém dados pessoais. A lista de arquivos é explícita e limitada ao shell e ao conteúdo da aplicação.
 

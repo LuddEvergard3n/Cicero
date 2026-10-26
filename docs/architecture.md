@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-O Cícero é uma aplicação web educacional estática para jovens brasileiros de 16 a 24 anos. A versão local 4.2.0 organiza 68 trilhas em sete eixos, usa numeração visual hierárquica e oferece ajuda, preferências locais de acessibilidade, navegação adaptável e instalação PWA sem fornecer aconselhamento individual.
+O Cícero é uma aplicação web educacional estática para jovens brasileiros de 16 a 24 anos. A versão 4.2.0 organiza 68 trilhas em sete eixos, usa numeração visual hierárquica e oferece ajuda, preferências locais de acessibilidade, navegação adaptável e instalação PWA sem fornecer aconselhamento individual.
 
 ## Decisões principais
 
